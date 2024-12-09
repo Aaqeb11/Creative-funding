@@ -15,6 +15,9 @@ export default {
       backgroundImage: {
         'custom-gradient': "linear-gradient(90deg, #84FE77, #3A6D35)",
       },
+      boxShadow: {
+        'blurred-white': '0 4px 10px 2px rgba(255, 255, 255, 0.5)', // Adjust values for x-offset, y-offset, blur, and spread
+      }
     },
   },
   plugins: [],
