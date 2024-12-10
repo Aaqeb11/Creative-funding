@@ -1,5 +1,6 @@
 import Loans from "./components/Loans";
 import NavBar from "./components/Navbar";
+import { SpecialityComponent } from "./components/SpecialityComponent";
 import Teams from "./components/Team";
 
 export default function Home() {
@@ -26,7 +27,7 @@ export default function Home() {
 
       {/* New Section */}
       <section className="relative flex flex-col items-center text-white py-16">
-      <div className="absolute top-0 left-6 right-6 h-1 bg-gray-400 shadow-blurred-white"></div>
+        <div className="absolute top-0 left-6 right-6 h-1 bg-gray-400 shadow-blurred-white"></div>
         <div className="mb-4">
           <span className="px-6 py-2 bg-custom-gradient text-white font-semibold rounded-full">
             LOANS
@@ -40,10 +41,10 @@ export default function Home() {
           you can see the many benefits of protecting critical ecosystems and
           share their growth over time.
         </p>
-        <Loans/>
+        <Loans />
       </section>
       <section className="relative flex flex-col items-center text-white py-16">
-      <div className="absolute top-0 left-6 right-6 h-1 bg-gray-400 shadow-blurred-white"></div>
+        <div className="absolute top-0 left-6 right-6 h-1 bg-gray-400 shadow-blurred-white"></div>
         <div className="mb-4">
           <span className="px-6 py-2 bg-custom-gradient text-white font-semibold rounded-full">
             TEAM
@@ -52,7 +53,24 @@ export default function Home() {
         <h2 className="text-3xl md:text-4xl font-semibold mt-6 mb-4">
           The Dream Team
         </h2>
-        <Teams/>
+        <Teams />
+      </section>
+      <section className="relative flex flex-col items-center text-white py-16 gap-8">
+        <div className="absolute top-0 left-6 right-6 h-1 bg-gray-400 shadow-blurred-white"></div>
+        <div className="mb-4">
+          <span className="px-6 py-2 bg-custom-gradient text-white font-semibold rounded-full">
+            LOANS
+          </span>
+        </div>
+        <h2 className="text-3xl md:text-4xl font-semibold mt-6 mb-4">
+          Type Of Loans We Offer
+        </h2>
+        <p className="text-lg max-w-2xl mt-2 text-center">
+          Technology brings new vision to nature. With satellite data and AI,
+          you can see the many benefits of protecting critical ecosystems and
+          share their growth over time.
+        </p>
+        <SpecialityComponent />
       </section>
     </div>
   );
