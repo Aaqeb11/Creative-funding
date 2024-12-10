@@ -40,7 +40,7 @@ export const SpecialityComponent = () => {
       </div>
 
       <div className="w-full flex justify-center ">
-        <Card className="w-[70%] bg-opacity-70 bg-[#999999] flex justify-between">
+        <Card className="w-[70%] bg-opacity-70 bg-[#999999] flex lg:flex-row flex-col lg:justify-between justify-center items-center">
           <div>
             <CardHeader>
               <CardTitle>{buttonData[selectedButton].title}</CardTitle>
