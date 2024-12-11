@@ -1,5 +1,6 @@
 import Loans from "./components/Loans";
 import NavBar from "./components/Navbar";
+import ProgressBar from "./components/Progress";
 import { SpecialityComponent } from "./components/SpecialityComponent";
 import Teams from "./components/Team";
 
@@ -42,6 +43,9 @@ export default function Home() {
           share their growth over time.
         </p>
         <Loans />
+      </section>
+      <section className="min-h-screen relative lg:my-16 my-20 mb-[22vh]">
+        <ProgressBar />
       </section>
       <section className="relative flex flex-col items-center text-white py-16">
         <div className="absolute top-0 left-6 right-6 h-1 bg-gray-400 shadow-blurred-white"></div>
