@@ -38,50 +38,34 @@ const cardData = [
     description: "offer and and there are plenty",
     content: "this is the type of loan that we offer and and there are plenty",
   },
+  {
+    id: 5,
+    title: "this is the type of loan that we",
+    description: "offer and and there are plenty",
+    content: "this is the type of loan that we offer and and there are plenty",
+  },
 ];
 
 const ProgressBar = () => {
   const progressRef = useRef(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
-  //   useEffect(() => {
-  //     const cards = cardsRef.current;
-
-  //     // GSAP Scroll Animation
-  //     gsap.fromTo(
-  //       cards,
-  //       { opacity: 0, y: 50 },
-  //       {
-  //         opacity: 1,
-  //         y: 0,
-  //         scrollTrigger: {
-  //           trigger: progressRef.current,
-  //           start: "top center+=100", // Adjust start position
-  //           end: "bottom center",
-  //           scrub: true,
-  //           markers: false, // Enable for debugging scroll positions
-  //         },
-  //         stagger: 0.3,
-  //       }
-  //     );
-  //   }, []);
-
   return (
-    <div className=" w-full flex justify-center items-center ">
-      <div className="flex flex-col justify-center items-center">
+    <div className=" w-full flex justify-center items-center min-h-screen mt-10">
+      <div className="flex flex-col justify-center items-center ">
         {cardData.map((card, index) => (
           <div key={index} className="w-full flex relative">
-            <div className="flex flex-col gap-0 mr-4">
+            <div className="flex flex-col gap-0 ">
               <div className="h-5 w-5 rounded-full bg-green-400"></div>
               {index !== cardData.length - 1 && (
                 <div className="h-40 w-1 bg-white mx-auto "></div>
               )}
             </div>
             <div
-              className={`absolute lg:w-[20vw]  w-[40vw]  ${
+              className={`absolute lg:w-[20vw]  w-[40vw] ${
                 index % 2 === 0
-                  ? "lg:left-[100px] left-[40px]"
-                  : "lg:right-[100px] right-[50px]"
+                  ? "lg:left-[100px] left-[35px]"
+                  : "lg:right-[100px] right-[35px]"
               }`}
             >
               <Card className="flex flex-col items-center justify-center text-center">
