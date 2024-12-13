@@ -10,7 +10,7 @@ const Teams: React.FC = () => {
             <img
               src="/pace.png" // Replace with your image path
               alt="Personal Loan"
-              className="w-[70%] h-[70%] mx-auto object-cover rounded-full mb-4"
+              className="w-[70%] h-[70%] mx-auto object-cover mb-4"
             />
             <h3 className="text-xl font-semibold mb-2">Personal Loan</h3>
             <p className="text-gray-600">
@@ -23,7 +23,7 @@ const Teams: React.FC = () => {
             <img
               src="/pace.png" // Replace with your image path
               alt="Business Loan"
-              className="w-[70%] h-[70%] mx-auto object-cover rounded-full mb-4"
+              className="w-[70%] h-[70%] mx-auto object-cover  mb-4"
             />
             <h3 className="text-xl font-semibold mb-2">Business Loan</h3>
             <p className="text-gray-600">
@@ -36,7 +36,7 @@ const Teams: React.FC = () => {
             <img
               src="/pace.png" // Replace with your image path
               alt="Home Loan"
-              className="w-[70%] h-[70%] mx-auto object-cover rounded-full mb-4"
+              className="w-[70%] h-[70%] mx-auto object-cover mb-4"
             />
             <h3 className="text-xl font-semibold mb-2">Home Loan</h3>
             <p className="text-gray-600">

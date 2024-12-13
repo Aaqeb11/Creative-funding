@@ -72,7 +72,7 @@ const ProgressBar = () => {
         {cardData.map((card, index) => (
           <div key={index} className="w-full flex relative">
             <div className="flex flex-col gap-0 mr-4">
-              <div className="h-5 w-5 rounded-full bg-green-400"></div>
+              <div className="h-5 w-5 rounded-full bg-custom-gradient"></div>
               {index !== cardData.length - 1 && (
                 <div className="h-40 w-1 bg-white mx-auto "></div>
               )}
@@ -84,7 +84,7 @@ const ProgressBar = () => {
                   : "lg:right-[100px] right-[50px]"
               }`}
             >
-              <Card className="flex flex-col items-center justify-center text-center">
+              <Card className="flex flex-col  bg-gray-500 items-center justify-center text-center">
                 <CardHeader>
                   <CardTitle>{card.title}</CardTitle>
                 </CardHeader>
