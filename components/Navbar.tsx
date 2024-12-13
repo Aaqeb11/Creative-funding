@@ -63,7 +63,7 @@ const NavBar: React.FC = () => {
   }, [isBodyLocked]);
 
   return (
-    <nav className="fixed border border-2 lg:top-[50px] top-0 left-0 right-0 bg-gray-400 z-50 h-[50px] lg:h-[60px] shadow-md w-full lg:w-[50%] lg:rounded-full mx-auto">
+    <nav className="fixed top-[50px] left-0 right-0 bg-gray-400 z-50 h-[50px] lg:h-[60px] shadow-md w-[90%] lg:w-[50%] rounded-full mx-auto">
       <div className=" h-full flex items-center w-[100%] mx-auto">
         <div className="flex items-center lg:space-x-10 w-full lg:justify-center h-full rounded-full">
           <div className="hidden lg:block w-full ">
