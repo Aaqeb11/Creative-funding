@@ -59,7 +59,7 @@ const Testimonials = () => {
             className="basis-[80%] sm:basis-1/2 lg:basis-1/3 "
           >
             <Card className="rounded-lg border-none mt-10 relative overflow-hidden">
-              <Image
+              <img
                 src={"/container.png"}
                 alt={card.title}
                 width={300}
