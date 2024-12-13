@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 import Image from "next/image";
+import picture from "../public/container.png";
 
 const Testimonials = () => {
   const testimonials = [
@@ -15,31 +16,31 @@ const Testimonials = () => {
       title: "Amazing Service!",
       description: "Pachama releases Project Evaluation Criteria 2.3",
       badge: "ANNOUNCEMENT",
-      image: "/container.png",
+      image: picture,
     },
     {
       title: "Excellent Experience",
       description: "This platform has transformed how I learn.",
       badge: "REVIEW",
-      image: "/container.png",
+      image: picture,
     },
     {
       title: "Highly Recommend!",
       description: "A game-changer for education.",
       badge: "FEATURE",
-      image: "/container.png",
+      image: picture,
     },
     {
       title: "Top-notch Support",
       description: "The team is always ready to help!",
       badge: "SUPPORT",
-      image: "/container.png",
+      image: picture,
     },
     {
       title: "Outstanding Results",
       description: "I've achieved more than I expected.",
       badge: "RESULTS",
-      image: "/container.png",
+      image: picture,
     },
   ];
 
