@@ -1,25 +1,61 @@
 import React from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "./ui/card";
-import { FaUserTie, FaRulerCombined, FaSmile } from "react-icons/fa";
+import { FaHome, FaHammer, FaMountain, FaMoneyBillWave, FaUserTie, FaHandshake, FaFileInvoiceDollar, FaUser, FaBriefcase } from "react-icons/fa";
 
 const servicesData = [
   {
-    icon: FaUserTie,
-    title: "Qualified & Driven Professionals",
+    icon: FaHome,
+    title: "DSCR Loans",
     description:
-      "The core team at DGA consists of qualified and driven professionals comprising of Architects, Interior Designers, and Engineers who create a versatile body of work.",
+      "A DSCR Rental Loan is a long-term rental loan designed for real estate investors to purchase or refinance rental properties. These loans are based on the property’s cash flow, ensuring that the net operating income exceeds or covers the mortgage payments.",
   },
   {
-    icon: FaRulerCombined,
-    title: "Timeless Designs",
+    icon: FaHammer,
+    title: "Rehab Loans",
     description:
-      "The firm strives to maintain a balance between aesthetics and functionality in all its designs. There is a constant search of exploring the uncharted and concluding beyond the conventional.",
+      "Rehab Loans are ideal for those aiming to fix and flip properties or improve rental properties to increase their income potential.",
   },
   {
-    icon: FaSmile,
-    title: "Happy Customers",
+    icon: FaMountain,
+    title: "Ground Up Loans",
     description:
-      "DGA maintains trusting and a close working relationship between the designer and the client for the success and smooth functioning of any undertaken project.",
+      "Ground Up Loans cover the costs of land acquisition and construction, providing the necessary capital to bring new residential projects to life.",
+  },
+  {
+    icon: FaMoneyBillWave,
+    title: "Bridge Loans",
+    description:
+      "Bridge Loans are short-term financing options designed to help real estate investors bridge the gap between the purchase of a new property and the sale of an existing one.",
+  },
+  {
+    icon: FaHome,
+    title: "Second Position DSCR Loans",
+    description:
+      "This is a long-term rental loan designed for real estate investors to refinance rental properties when there is already existing debt on the property.",
+  },
+  {
+    icon: FaHandshake,
+    title: "PML",
+    description:
+      "A PML (Private Money Lender) loan provides flexible, short-term financing for real estate investors, offering fast approvals, competitive rates, and tailored solutions.",
+  },
+  {
+    icon: FaFileInvoiceDollar,
+    title: "EMD Lender",
+    description:
+      "An Earnest Money Deposit loan provides short-term financing for real estate investors to cover the earnest money required to secure a property under contract.",
+  },
+  {
+    icon: FaUser,
+    title: "Personal Lending",
+    description:
+      "Personal real estate lending offers flexible financing for individuals looking to purchase, renovate, or improve their personal property.",
+  },
+  {
+    icon: FaBriefcase,
+    title: "Business Funding",
+    description:
+      "Looking to buy an existing business? Our business acquisition loans offer flexible financing solutions to help you secure the capital you need to purchase and grow an established business.",
   },
 ];
 
@@ -33,11 +69,11 @@ const Loans: React.FC = () => {
               key={index}
               className="bg-gray-400 p-8 rounded-lg shadow-lg transform transition-transform hover:scale-105 duration-300 border-none"
             >
-              <div className="mb-4 text-green">
+              <div className="mb-4 text-white">
                 <service.icon className="w-12 h-12 mx-auto" />
               </div>
               <CardHeader className="p-0 pb-2">
-                <CardTitle className="text-xl font-semibold mb-2">
+                <CardTitle className="text-xl text-white font-semibold mb-2">
                   {service.title}
                 </CardTitle>
               </CardHeader>

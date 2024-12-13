@@ -279,14 +279,14 @@ export default function Home() {
       >
         <div className="mb-4">
           <span className="px-6 py-2 bg-custom-gradient text-white font-semibold rounded-full">
-            LOANS
+            WHY US
           </span>
         </div>
         <h2
           className="text-3xl md:text-4xl font-semibold mt-6 mb-4 text-center"
           id="speciality_heading"
         >
-          Type Of Loans We Offer
+          Why Chose Us
         </h2>
         <p
           className="text-md md:text-xl lg:max-w-2xl max-w-lg mt-2 text-center text-white px-2"

@@ -7,28 +7,28 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 const cardData = [
   {
     id: 1,
-    title: "Loan Type 1",
-    content: "This is the type of loan that we offer, and there are plenty.",
+    title: "1",
+    content: "Prequalification",
   },
   {
     id: 2,
-    title: "Loan Type 2",
-    content: "This is the type of loan that we offer, and there are plenty.",
+    title: "2",
+    content: "Complete Loan Application",
   },
   {
     id: 3,
-    title: "Loan Type 3",
-    content: "This is the type of loan that we offer, and there are plenty.",
+    title: "3",
+    content: "Underwriting and Appraisal",
   },
   {
     id: 4,
-    title: "Loan Type 4",
-    content: "This is the type of loan that we offer, and there are plenty.",
+    title: "4",
+    content: "Conditional Approval",
   },
   {
     id: 5,
-    title: "Loan Type 5",
-    content: "This is the type of loan that we offer, and there are plenty.",
+    title: "5",
+    content: "Loan Closing",
   },
 ];
 
@@ -101,9 +101,9 @@ const ProgressBar = () => {
         {cardData.map((card, index) => (
           <div key={index} className="w-full flex relative progress_line">
             <div className="flex flex-col gap-0 ">
-              <div className="h-5 w-5 rounded-full bg-green-400"></div>
+              <div className="h-5 w-5 rounded-full bg-custom-gradient"></div>
               {index !== cardData.length - 1 && (
-                <div className="h-40 w-1 bg-white mx-auto "></div>
+                <div className="h-40 w-1 bg-gray-600 mx-auto "></div>
               )}
             </div>
             <div
@@ -113,11 +113,11 @@ const ProgressBar = () => {
                   : "lg:right-[100px] right-[35px]"
               }`}
             >
-              <Card className="flex flex-col items-center justify-center text-center">
+              <Card className="flex bg-gray-600 flex-col items-center justify-center text-center">
                 <CardHeader>
-                  <CardTitle>{card.title}</CardTitle>
+                  <CardTitle className="text-5xl text-bold text-white">{card.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="text-white">
                   <p>{card.content}</p>
                 </CardContent>
               </Card>
