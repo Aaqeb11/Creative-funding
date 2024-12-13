@@ -16,31 +16,31 @@ const Testimonials = () => {
       title: "Amazing Service!",
       description: "Pachama releases Project Evaluation Criteria 2.3",
       badge: "ANNOUNCEMENT",
-      image: picture,
+      image: "/container.png",
     },
     {
       title: "Excellent Experience",
       description: "This platform has transformed how I learn.",
       badge: "REVIEW",
-      image: picture,
+      image: "/container.png",
     },
     {
       title: "Highly Recommend!",
       description: "A game-changer for education.",
       badge: "FEATURE",
-      image: picture,
+      image: "/container.png",
     },
     {
       title: "Top-notch Support",
       description: "The team is always ready to help!",
       badge: "SUPPORT",
-      image: picture,
+      image: "/container.png",
     },
     {
       title: "Outstanding Results",
       description: "I've achieved more than I expected.",
       badge: "RESULTS",
-      image: picture,
+      image: "/container.png",
     },
   ];
 
@@ -60,7 +60,7 @@ const Testimonials = () => {
           >
             <Card className="rounded-lg border-none mt-10 relative overflow-hidden">
               <Image
-                src={card.image}
+                src={"/container.png"}
                 alt={card.title}
                 width={300}
                 height={300}
