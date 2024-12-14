@@ -11,6 +11,14 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
 import Image from "next/image";
+import LogoSlider from "@/components/LogoSlider";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+} from "../components/ui/card";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
@@ -160,11 +168,11 @@ export default function Home() {
   return (
     <div
       ref={scope}
-      className="relative min-h-screen bg-cover bg-center"
+      className="relative min-h-screen bg-cover bg-center overflow-hidden"
       style={{ backgroundImage: "url('/background.jpg')" }}
     >
       <NavBar />
-      <main className="relative flex flex-col items-center justify-center min-h-screen text-white">
+      <main className="relative flex flex-col items-center justify-center min-h-screen text-white ">
         <Image
           src="/dollar2.png"
           width={100}
@@ -200,9 +208,35 @@ export default function Home() {
           </div>
         </div>
       </main>
+      {/* New Section*/}
+      <section className="flex flex-col justify-center lg:gap-14  gap-6 -mt-16 lg:-mt-0">
+        <div className="">
+          <LogoSlider />
+        </div>
+        <div className="w-full flex items-center justify-center  ">
+          <Card className="lg:w-[70%] w-[90%] gap-4 flex items-center justify-center lg:gap-[14vw]  rounded-full p-2">
+            <div className="flex flex-col">
+              <p className="lg:text-7xl md:text-4xl text-2xl  text-center">
+                48
+              </p>
+              <p className="text-xl text-center ">Business</p>
+            </div>
+            <div className="flex flex-col">
+              <p className="lg:text-7xl md:text-4xl text-2xl  text-center">
+                48
+              </p>
+              <p className="text-xl text-center ">Business</p>
+            </div>
+            <div className="flex flex-col">
+              <p className="lg:text-7xl md:text-4xl text-2xl text-center">48</p>
+              <p className="text-xl text-center">Business</p>
+            </div>
+          </Card>
+        </div>
+      </section>
 
       {/* New Section */}
-      <div className=" h-1 bg-gray-400 shadow-blurred-white"></div>
+      <div className=" h-1 bg-gray-400 shadow-blurred-white mt-10"></div>
       <section
         className="relative flex flex-col items-center text-white my-16"
         id="loan_sec"
@@ -350,6 +384,7 @@ export default function Home() {
         </p>
         <Form />
       </section>
+      <Footer />
     </div>
   );
 }

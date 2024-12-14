@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "./ui/card";
-import { FaHome, FaHammer, FaMountain, FaMoneyBillWave, FaUserTie, FaHandshake, FaFileInvoiceDollar, FaUser, FaBriefcase } from "react-icons/fa";
+import {
+  FaHome,
+  FaHammer,
+  FaMountain,
+  FaMoneyBillWave,
+  FaUserTie,
+  FaHandshake,
+  FaFileInvoiceDollar,
+  FaUser,
+  FaBriefcase,
+} from "react-icons/fa";
+import ReactCardFlip from "react-card-flip";
 
 const servicesData = [
   {
     icon: FaHome,
     title: "DSCR Loans",
     description:
-      "A DSCR Rental Loan is a long-term rental loan designed for real estate investors to purchase or refinance rental properties. These loans are based on the property’s cash flow, ensuring that the net operating income exceeds or covers the mortgage payments.",
+      "A DSCR Rental Loan is a long-term rental loan designed for real estate investors to purchase or refinance rental properties.",
   },
   {
     icon: FaHammer,
@@ -60,27 +71,68 @@ const servicesData = [
 ];
 
 const Loans: React.FC = () => {
+  const [flippedStates, setFlippedStates] = useState<boolean[]>(
+    new Array(servicesData.length).fill(false)
+  );
+
+  const handleFlip = (index: number) => {
+    setFlippedStates((prev) =>
+      prev.map((state, i) => (i === index ? !state : state))
+    );
+  };
+
   return (
     <section className="py-16 text-center">
       <div className="mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {servicesData.map((service, index) => (
-            <Card
+            <ReactCardFlip
               key={index}
-              className="bg-gray-400 p-8 rounded-lg shadow-lg transform transition-transform hover:scale-105 duration-300 border-none"
+              isFlipped={flippedStates[index]}
+              flipDirection="vertical"
             >
-              <div className="mb-4 text-white">
-                <service.icon className="w-12 h-12 mx-auto" />
-              </div>
-              <CardHeader className="p-0 pb-2">
-                <CardTitle className="text-xl text-white font-semibold mb-2">
-                  {service.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-0">
-                <p className="text-gray-200">{service.description}</p>
-              </CardContent>
-            </Card>
+              {/* Front of the card */}
+              <Card className="bg-gray-400 p-8 rounded-lg shadow-lg transform transition-transform lg:hover:scale-105 duration-300 border-none flex flex-col justify-evenly gap-2 md:h-[40vh] h-[55vh] ">
+                <div>
+                  <div className="mb-4 text-white">
+                    <service.icon className="w-12 h-12 mx-auto" />
+                  </div>
+                  <CardHeader className="p-0 pb-2">
+                    <CardTitle className="text-xl text-white font-semibold mb-2">
+                      {service.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-0">
+                    <p className="text-gray-200">{service.description}</p>
+                  </CardContent>
+                </div>
+                <div className="items-center justify-center">
+                  <button
+                    className="p-4 rounded-full bg-green-800 text-white"
+                    onClick={() => handleFlip(index)}
+                  >
+                    More Info
+                  </button>
+                </div>
+              </Card>
+
+              {/* Back of the card */}
+              <Card className="bg-gray-400 p-8 rounded-lg shadow-lg transform transition-transform lg:hover:scale-105 duration-300 border-none flex flex-col justify-evenly gap-2 md:h-[40vh] h-[55vh]">
+                <div>
+                  <CardContent className="p-0">
+                    <p className="text-gray-200">{service.description}</p>
+                  </CardContent>
+                </div>
+                <div className="items-center justify-center">
+                  <button
+                    className="p-4 rounded-full bg-green-800 text-white"
+                    onClick={() => handleFlip(index)}
+                  >
+                    Less Info
+                  </button>
+                </div>
+              </Card>
+            </ReactCardFlip>
           ))}
         </div>
       </div>

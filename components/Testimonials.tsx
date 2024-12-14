@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, CardContent } from "./ui/card";
 import {
   Carousel,
@@ -8,7 +8,7 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 import Image from "next/image";
-import picture from "../public/container.png";
+import ReactCardFlip from "react-card-flip";
 
 const Testimonials = () => {
   const testimonials = [
@@ -44,6 +44,16 @@ const Testimonials = () => {
     },
   ];
 
+  const [flippedStates, setFlippedStates] = useState<boolean[]>(
+    new Array(testimonials.length).fill(false)
+  );
+
+  const handleFlip = (index: number) => {
+    setFlippedStates((prev) =>
+      prev.map((state, i) => (i === index ? !state : state))
+    );
+  };
+
   return (
     <Carousel
       opts={{
@@ -56,32 +66,81 @@ const Testimonials = () => {
         {testimonials.map((card, index) => (
           <CarouselItem
             key={index}
-            className="basis-[80%] sm:basis-1/2 lg:basis-1/3 "
+            className="basis-[80%] sm:basis-1/2 lg:basis-1/3"
           >
-            <Card className="rounded-lg border-none mt-10 relative overflow-hidden">
-              <Image
-                src={card.image}
-                alt={card.title}
-                width={300}
-                height={300}
-                className="w-full rounded-lg md:h-[70vh] h-[60vh] z-0 object-cover"
-              />
-              <CardContent className="absolute top-0 left-0 z-10 flex items-end justify-center h-full w-full text-white p-0">
-                <div className="w-full h-1/3 bg-white/30 backdrop-blur-md opacity-80 flex flex-col rounded-b-lg p-4">
-                  <div className="flex gap-4 items-center min-h-16">
-                    <p className="md:text-xl text-sm px-6 py-1 bg-white text-[#0C5304] rounded-lg">
-                      {card.badge}
-                    </p>
-                    <p className="md:text-xl text-sm font-bold">{card.title}</p>
+            <ReactCardFlip
+              isFlipped={flippedStates[index]}
+              flipDirection="horizontal"
+            >
+              {/* Front Face */}
+              <Card className="rounded-lg border-none mt-10 relative overflow-hidden">
+                <Image
+                  src={card.image}
+                  alt={card.title}
+                  width={300}
+                  height={300}
+                  className="w-full rounded-lg md:h-[75vh] h-[80vh] z-0 object-cover"
+                />
+                <CardContent className="absolute top-0 left-0 z-10 flex items-end justify-center h-full w-full text-white p-0">
+                  <div className="w-full h-1/3 bg-white/30 backdrop-blur-md opacity-80 flex flex-col rounded-b-lg p-4 justify-between">
+                    <div>
+                      <div className="flex gap-4 items-center min-h-16">
+                        <p className="md:text-xl text-sm px-6 py-1 bg-white text-[#0C5304] rounded-lg">
+                          {card.badge}
+                        </p>
+                        <p className="md:text-xl text-sm font-bold">
+                          {card.title}
+                        </p>
+                      </div>
+                      <div className="mt-2">
+                        <p className="md:text-xl text-lg font-bold">
+                          {card.description}
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      <button
+                        className="mt-2 px-4 py-2 bg-green-800 text-white rounded"
+                        onClick={() => handleFlip(index)}
+                      >
+                        More Info
+                      </button>
+                    </div>
                   </div>
-                  <div className="mt-2">
-                    <p className="md:text-xl text-lg font-bold">
-                      {card.description}
-                    </p>
+                </CardContent>
+              </Card>
+
+              {/* Back Face */}
+              <Card className="rounded-lg border-none mt-10 relative overflow-hidden md:h-[75vh] h-[80vh]">
+                <CardContent className="absolute top-0 left-0 z-10 flex items-end justify-center h-full w-full  p-0">
+                  <div className="w-full h-1/3 bg-white/30 backdrop-blur-md opacity-80 flex flex-col rounded-b-lg p-4 justify-between">
+                    <div>
+                      <div className="flex gap-4 items-center min-h-18">
+                        <p className="md:text-xl text-sm px-6 py-1 bg-white text-[#0C5304] rounded-lg">
+                          {card.badge}
+                        </p>
+                        <p className="md:text-xl text-sm font-bold">
+                          {card.title}
+                        </p>
+                      </div>
+                      <div className="mt-2">
+                        <p className="md:text-xl text-lg font-bold">
+                          {card.description}
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      <button
+                        className="mt-2 px-4 py-2 bg-green-800 text-white rounded"
+                        onClick={() => handleFlip(index)}
+                      >
+                        More Info
+                      </button>
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </ReactCardFlip>
           </CarouselItem>
         ))}
       </CarouselContent>

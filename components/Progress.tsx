@@ -34,62 +34,62 @@ const cardData = [
 
 const ProgressBar = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      gsap.registerPlugin(ScrollTrigger);
-      if (containerRef.current) {
-        // Animate Cards
-        const elements = gsap.utils.toArray(".attend_card");
-        elements.forEach((element: any, index: number) => {
-          gsap.set(element, {
-            clipPath: "inset(0 0 100% 0)",
-            opacity: 0,
-            y: 50,
-          });
-
-          ScrollTrigger.create({
-            trigger: element,
-            start: "top 80%",
-            onEnter: () => {
-              gsap.to(element, {
-                clipPath: "inset(0 0 0% 0)",
-                opacity: 1,
-                y: 0,
-                duration: 1.3,
-                delay: index * 0.3, // Add stagger effect
-                ease: "power3.out",
-              });
-            },
-            once: true,
-          });
+    // if (typeof window !== "undefined") {
+    if (containerRef.current) {
+      // Animate Cards
+      const elements = gsap.utils.toArray(".attend_card");
+      elements.forEach((element: any, index: number) => {
+        gsap.set(element, {
+          clipPath: "inset(0 0 100% 0)",
+          opacity: 0,
+          y: 50,
         });
 
-        // Animate Progress Lines
-        const progressLines = gsap.utils.toArray(".progress_line");
-        progressLines.forEach((line: any, index: number) => {
-          gsap.set(line, {
-            height: "0%", // Start collapsed
-            opacity: 0,
-          });
-
-          ScrollTrigger.create({
-            trigger: line,
-            start: "top 80%",
-            onEnter: () => {
-              gsap.to(line, {
-                height: "100%",
-                opacity: 1,
-                duration: 1.3,
-                delay: index * 0.2, // Stagger effect for progress lines
-                ease: "power3.out",
-              });
-            },
-            once: true,
-          });
+        ScrollTrigger.create({
+          trigger: element,
+          start: "top 80%",
+          onEnter: () => {
+            gsap.to(element, {
+              clipPath: "inset(0 0 0% 0)",
+              opacity: 1,
+              y: 0,
+              duration: 1.3,
+              delay: index * 0.3, // Add stagger effect
+              ease: "power3.out",
+            });
+          },
+          once: true,
         });
-      }
+      });
+
+      // Animate Progress Lines
+      const progressLines = gsap.utils.toArray(".progress_line");
+      progressLines.forEach((line: any, index: number) => {
+        gsap.set(line, {
+          height: "0%", // Start collapsed
+          opacity: 0,
+        });
+
+        ScrollTrigger.create({
+          trigger: line,
+          start: "top 80%",
+          onEnter: () => {
+            gsap.to(line, {
+              height: "100%",
+              opacity: 1,
+              duration: 1.3,
+              delay: index * 0.2, // Stagger effect for progress lines
+              ease: "power3.out",
+            });
+          },
+          once: true,
+        });
+      });
     }
+    // }
   }, []);
 
   return (
@@ -115,7 +115,9 @@ const ProgressBar = () => {
             >
               <Card className="flex bg-gray-600 flex-col items-center justify-center text-center">
                 <CardHeader>
-                  <CardTitle className="text-5xl text-bold text-white">{card.title}</CardTitle>
+                  <CardTitle className="text-5xl text-bold text-white">
+                    {card.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent className="text-white">
                   <p>{card.content}</p>
