@@ -7,7 +7,7 @@ import { MdOutlinePhoneInTalk } from "react-icons/md";
 
 export const Footer = () => {
   return (
-    <footer className="bg-white  dark:bg-gray-900 pt-12">
+    <footer className="bg-transparent  dark:bg-gray-900 pt-12">
       <div className="w-full  mx-auto p-4 md:py-8">
         <div className="flex flex-col items-center justify-between md:flex-row gap-4 md:gap-0">
           <Link href="/" passHref>
@@ -42,23 +42,23 @@ export const Footer = () => {
         <div className="flex  items-center justify-center gap-8">
           <div className="flex flex-col justify-between gap-4">
             <Link href="mailto:info@ghaffarenterprises ">
-              <IoMailOutline className="text-[#D72323] md:text-3xl text-2xl animate-pulse" />
+              <IoMailOutline className="bg-custom-gradient rounded-full md:text-3xl text-2xl animate-pulse" />
             </Link>
             <Link href="tel:+1 (630) 526-4000">
-              <MdOutlinePhoneInTalk className="text-[#D72323] md:text-3xl text-2xl animate-pulse" />
+              <MdOutlinePhoneInTalk className="bg-custom-gradient rounded-full md:text-3xl text-2xl animate-pulse" />
             </Link>
           </div>
-          <div className="flex flex-col justify-between gap-4">
+          <div className="flex flex-col  font-medium  justify-between gap-4">
             <Link
               href="mailto:info@ghaffarenterprises "
-              className="md:text-xl text-lg"
+              className="md:text-lg text-gray-400 text-lg"
             >
               {" "}
-              info@ghaffarenterprises.com
+              email@gmail.com
             </Link>
-            <Link href="tel:+1 (630) 526-4000" className="md:text-xl text-lg">
+            <Link href="tel:+1 (630) 526-4000" className="md:text-lg text-gray-400 text-lg">
               {" "}
-              630-526-4000
+              123456789
             </Link>
           </div>
         </div>

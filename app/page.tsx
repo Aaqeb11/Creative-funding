@@ -214,25 +214,51 @@ export default function Home() {
           <LogoSlider />
         </div>
         <div className="w-full flex items-center justify-center  ">
-          <Card className="lg:w-[70%] w-[90%] gap-4 flex items-center justify-center lg:gap-[14vw]  rounded-full p-2">
+          <Card className="lg:w-[70%] w-[90%] bg-gray-600 gap-4 flex items-center justify-center lg:gap-[14vw]  rounded-full p-2">
             <div className="flex flex-col">
-              <p className="lg:text-7xl md:text-4xl text-2xl  text-center">
+              <p className="lg:text-7xl text-white md:text-4xl text-2xl  text-center">
                 48
               </p>
-              <p className="text-xl text-center ">Business</p>
+              <p className="text-xl text-white text-center ">Business</p>
             </div>
             <div className="flex flex-col">
-              <p className="lg:text-7xl md:text-4xl text-2xl  text-center">
+              <p className="lg:text-7xl text-white md:text-4xl text-2xl  text-center">
                 48
               </p>
-              <p className="text-xl text-center ">Business</p>
+              <p className="text-xl text-white text-center ">Business</p>
             </div>
             <div className="flex flex-col">
-              <p className="lg:text-7xl md:text-4xl text-2xl text-center">48</p>
-              <p className="text-xl text-center">Business</p>
+              <p className="lg:text-7xl text-white md:text-4xl text-2xl text-center">48</p>
+              <p className="text-xl text-white text-center">Business</p>
             </div>
           </Card>
         </div>
+      </section>
+      <div className=" h-1 mt-10 bg-gray-400 shadow-blurred-white"></div>
+      <section
+        className="relative  flex flex-col items-center text-white mt-16 "
+        id="speciality_sec"
+      >
+        <div className="mb-4">
+          <span className="px-6 py-2 bg-custom-gradient text-white font-semibold rounded-full">
+            WHY US
+          </span>
+        </div>
+        <h2
+          className="text-3xl md:text-4xl font-semibold mt-6 mb-4 text-center"
+          id="speciality_heading"
+        >
+          Why Chose Us
+        </h2>
+        <p
+          className="text-md md:text-xl lg:max-w-2xl max-w-lg mt-2 text-center text-white px-2"
+          id="speciality_content"
+        >
+          Technology brings new vision to nature. With satellite data and AI,
+          you can see the many benefits of protecting critical ecosystems and
+          share their growth over time.
+        </p>
+        <SpecialityComponent />
       </section>
 
       {/* New Section */}
@@ -306,32 +332,7 @@ export default function Home() {
         </h2>
         <Teams />
       </section>
-      <div className=" h-1 bg-gray-400 shadow-blurred-white"></div>
-      <section
-        className="relative  flex flex-col items-center text-white mt-16 "
-        id="speciality_sec"
-      >
-        <div className="mb-4">
-          <span className="px-6 py-2 bg-custom-gradient text-white font-semibold rounded-full">
-            WHY US
-          </span>
-        </div>
-        <h2
-          className="text-3xl md:text-4xl font-semibold mt-6 mb-4 text-center"
-          id="speciality_heading"
-        >
-          Why Chose Us
-        </h2>
-        <p
-          className="text-md md:text-xl lg:max-w-2xl max-w-lg mt-2 text-center text-white px-2"
-          id="speciality_content"
-        >
-          Technology brings new vision to nature. With satellite data and AI,
-          you can see the many benefits of protecting critical ecosystems and
-          share their growth over time.
-        </p>
-        <SpecialityComponent />
-      </section>
+      
       <div className=" h-1 bg-gray-400 shadow-blurred-white"></div>
       <section
         className="relative  flex flex-col items-center text-white my-16 "

@@ -92,7 +92,7 @@ const Loans: React.FC = () => {
               flipDirection="vertical"
             >
               {/* Front of the card */}
-              <Card className="bg-gray-400 p-8 rounded-lg shadow-lg transform transition-transform lg:hover:scale-105 duration-300 border-none flex flex-col justify-evenly gap-2 md:h-[40vh] h-[55vh] ">
+              <Card className="bg-gray-600 p-8 rounded-lg shadow-lg transform transition-transform lg:hover:scale-105 duration-300 border-none flex flex-col justify-evenly gap-2 md:h-[40vh] h-[55vh] ">
                 <div>
                   <div className="mb-4 text-white">
                     <service.icon className="w-12 h-12 mx-auto" />
@@ -117,7 +117,7 @@ const Loans: React.FC = () => {
               </Card>
 
               {/* Back of the card */}
-              <Card className="bg-gray-400 p-8 rounded-lg shadow-lg transform transition-transform lg:hover:scale-105 duration-300 border-none flex flex-col justify-evenly gap-2 md:h-[40vh] h-[55vh]">
+              <Card className="bg-gray-600 p-8 rounded-lg shadow-lg transform transition-transform lg:hover:scale-105 duration-300 border-none flex flex-col justify-evenly gap-2 md:h-[40vh] h-[55vh]">
                 <div>
                   <CardContent className="p-0">
                     <p className="text-gray-200">{service.description}</p>
