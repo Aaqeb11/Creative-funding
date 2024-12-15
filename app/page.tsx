@@ -198,8 +198,8 @@ export default function Home() {
             className="text-md md:text-xl p-4 mb-6 max-w-lg mx-auto"
             id="intro_content"
           >
-            A description about the website and how it has helped people uplift
-            their business — basically a generic description.
+             Flexible loans designed for you.
+              Achieve your goals with ease and confidence.
           </p>
           <div id="intro_button">
             <button className="px-6 py-3 bg-gray-200 text-black rounded-lg shadow-md hover:bg-gray-300 transition">
@@ -254,9 +254,7 @@ export default function Home() {
           className="text-md md:text-xl lg:max-w-2xl max-w-lg mt-2 text-center text-white px-2"
           id="speciality_content"
         >
-          Technology brings new vision to nature. With satellite data and AI,
-          you can see the many benefits of protecting critical ecosystems and
-          share their growth over time.
+          Discover why we're the trusted choice for your funding needs
         </p>
         <SpecialityComponent />
       </section>
@@ -282,9 +280,7 @@ export default function Home() {
           className="text-md md:text-xl lg:max-w-2xl max-w-lg px-2 mt-2 text-center"
           id="loan_content"
         >
-          Technology brings new vision to nature. With satellite data and AI,
-          you can see the many benefits of protecting critical ecosystems and
-          share their growth over time.
+          Choose from the plethora of loans we provide and their Criterias
         </p>
         <Loans />
       </section>
@@ -302,15 +298,13 @@ export default function Home() {
           className="text-3xl md:text-4xl font-semibold mt-6 mb-4 text-white text-center"
           id="process_heading"
         >
-          Our process makes funding easier
+          Our process makes funding easier 
         </h2>
         <p
           className="text-md md:text-xl lg:max-w-2xl max-w-lg mt-2 text-center text-white px-2"
           id="process_content"
         >
-          Technology brings new vision to nature. With satellite data and AI,
-          you can see the many benefits of protecting critical ecosystems and
-          share their growth over time.
+          Our trusted and tested process has been streamlined and perfected to perform better and and faster making your dream into a reality faster than ever
         </p>
         <ProgressBar />
       </section>
@@ -353,9 +347,7 @@ export default function Home() {
           className="text-md md:text-xl lg:max-w-2xl max-w-lg mt-2 text-center text-white px-2"
           id="testmonial_content"
         >
-          Technology brings new vision to nature. With satellite data and AI,
-          you can see the many benefits of protecting critical ecosystems and
-          share their growth over time.
+          Hear from our satisfied customers who have experienced the benfit of using our services and what their dreams have become 
         </p>
         <Testimonials />
       </section>
@@ -379,9 +371,7 @@ export default function Home() {
           className="text-md md:text-xl lg:max-w-2xl max-w-lg mt-2 text-center text-white px-2"
           id="form_section"
         >
-          Technology brings new vision to nature. With satellite data and AI,
-          you can see the many benefits of protecting critical ecosystems and
-          share their growth over time.
+          Get started today by filling out our easy application form and take the first step toward your financial solution.
         </p>
         <Form />
       </section>

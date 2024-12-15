@@ -7,27 +7,27 @@ type ButtonDataType = {
   footer: string;
 };
 
-type ButtonType = "button1" | "button2" | "button3";
+type ButtonType = "Easy" | "Trust" | "Available";
 
 export const SpecialityStore = new Store({
-  selectedButton: "button1" as ButtonType,
+  selectedButton: "Easy" as ButtonType,
   buttonData: {
-    button1: {
-      title: "Button 1 Details",
-      description: "Detailed information for Button 1",
-      content: "Specific content related to Button 1",
+    Easy: {
+      title: "Easy Process",
+      description:"we've streamlined our lending process to be as simple and quick as possible. Whether you need funding for a project or a personal loan, our easy application and fast approval system ensure you get the money you need without unnecessary hurdles.",
+      content: "we've streamlined our lending process to be as simple and quick as possible. Whether you need funding for a project or a personal loan, our easy application and fast approval system ensure you get the money you need without unnecessary hurdles.",
       footer: "Footer information for Button 1",
     },
-    button2: {
-      title: "Button 2 Details",
-      description: "Detailed information for Button 2",
-      content: "Specific content related to Button 2",
+    Trust: {
+      title: "Trustworthy Service",
+      description: "we prioritize building trust with our clients. Our transparent terms, ethical practices, and commitment to your financial well-being ensure you can rely on us for all your lending needs.",
+      content: "we prioritize building trust with our clients. Our transparent terms, ethical practices, and commitment to your financial well-being ensure you can rely on us for all your lending needs.",
       footer: "Footer information for Button 2",
     },
-    button3: {
-      title: "Button 3 Details",
-      description: "Detailed information for Button 3",
-      content: "Specific content related to Button 3",
+    Available: {
+      title: "Always Available",
+      description: " Our support ensures that no matter the time or situation, we're here to assist you, provide guidance, and make sure you're on track to achieve your goals.",
+      content: " Our support ensures that no matter the time or situation, we're here to assist you, provide guidance, and make sure you're on track to achieve your goals.",
       footer: "Footer information for Button 3",
     },
   },

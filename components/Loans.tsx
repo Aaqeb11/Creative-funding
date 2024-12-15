@@ -19,55 +19,122 @@ const servicesData = [
     title: "DSCR Loans",
     description:
       "A DSCR Rental Loan is a long-term rental loan designed for real estate investors to purchase or refinance rental properties.",
-  },
+      backContent: `
+      Loan Amounts: $55k – $2M
+      Property Types: 1-4 SFH,Conods,Townhomes
+      Credit Score: Minimum 660+
+      Long Terms: 30 Year fixed Rate , ARMS and interest-Only
+      Cashout Options: 75% Cashout Available on all Unleased or Vacant Properties
+    `,
+    },
   {
     icon: FaHammer,
     title: "Rehab Loans",
     description:
       "Rehab Loans are ideal for those aiming to fix and flip properties or improve rental properties to increase their income potential.",
-  },
+      backContent: `
+      Loan Amounts: $70k – $4M
+      Property Types: 1-4 SFH,Conods,Townhomes
+      Acquisition LTV: Up to 90%
+      Rehab Budget LTV: Up to 100%
+      Monthly Payments: Rolled into the loan to ease cash flow management 
+      Loan Terms: Upto 24-month term available  
+    `,
+    },
   {
     icon: FaMountain,
     title: "Ground Up Loans",
     description:
       "Ground Up Loans cover the costs of land acquisition and construction, providing the necessary capital to bring new residential projects to life.",
-  },
+      backContent: `
+      Loan Amounts: $100k – $4M
+      Property Types: 1-4 SFH,Conods,Townhomes
+      LTC: Up to 90%
+      LTARV: Up to 75% 
+      Loan Terms:12-24 Month terms available
+    `,
+    },
   {
     icon: FaMoneyBillWave,
     title: "Bridge Loans",
     description:
       "Bridge Loans are short-term financing options designed to help real estate investors bridge the gap between the purchase of a new property and the sale of an existing one.",
-  },
+      backContent: `
+      Loan Amounts: $75K – $4M
+      Property Types: 1-4 SFH,Conods,Townhomes
+      LTC: Up to 80%
+      No Asset Verification: Streamlined application process with minimal documentation(restrictions apply)  
+      Loan Terms:6-24 Month terms available
+    `,
+    },
   {
     icon: FaHome,
     title: "Second Position DSCR Loans",
     description:
-      "This is a long-term rental loan designed for real estate investors to refinance rental properties when there is already existing debt on the property.",
-  },
+      "This is a long-term rental : /n loan designed for real estate investors to refinance rental properties when there is already existing debt on the property.",
+      backContent: `
+      Loan Amounts: $30K – $500K
+      Property Types: 1-4 SFH,Conods,Townhomes
+      DCSR Requirment: 1.1x minimum
+      Loan Terms:30-year fixed
+      Cashout Option: Up to 85% combined loan to value(CLTV)
+      Cashout available on unleased or vacant properties
+    `,
+    },
   {
     icon: FaHandshake,
     title: "PML",
     description:
       "A PML (Private Money Lender) loan provides flexible, short-term financing for real estate investors, offering fast approvals, competitive rates, and tailored solutions.",
-  },
+      backContent: `
+      Loan Amounts: $75K – $1.5M
+      Property Types: 1-4 SFH,Conods,Townhomes
+      Loan to Cost: Up to 80%
+      Loan to ARV: Up to 70%
+      Cashout Option: 6-18 months terms available
+      Quick Closing Timeline
+    `,
+    },
   {
     icon: FaFileInvoiceDollar,
     title: "EMD Lender",
     description:
       "An Earnest Money Deposit loan provides short-term financing for real estate investors to cover the earnest money required to secure a property under contract.",
-  },
+      backContent: `
+      Loan Amounts: $1K – $10K
+      Property Types: 1-4 SFH,Conods,Townhomes
+      Loan Terms Negotiable
+    `,
+  
+    },
   {
     icon: FaUser,
     title: "Personal Lending",
     description:
       "Personal real estate lending offers flexible financing for individuals looking to purchase, renovate, or improve their personal property.",
-  },
+      backContent: `
+      Loan Amounts: $50K – $2M
+      Purpose: Single Family Homes,condos,townhomes
+      LTV: Up to 85% 
+      Income Verification: Proof of stable income or employment required
+      Loan Terms: 12-60 months available
+      Credit Rquirements: Minimum credit score of 680
+    `,
+    },
   {
     icon: FaBriefcase,
     title: "Business Funding",
     description:
       "Looking to buy an existing business? Our business acquisition loans offer flexible financing solutions to help you secure the capital you need to purchase and grow an established business.",
-  },
+      backContent: `
+      Loan Amounts: $50K – $2M
+      Propertt Types: SIngle Family Homes,condos,townhomes
+      LTV: Up to 85%
+      Income Verfication: Proof of stable income or employment required
+      Loan Terms: 12-60 months Available
+      Credit Requirements: Minimum credit score of 680
+    `,
+    },
 ];
 
 const Loans: React.FC = () => {
@@ -115,23 +182,26 @@ const Loans: React.FC = () => {
                   </button>
                 </div>
               </Card>
-
               {/* Back of the card */}
-              <Card className="bg-gray-600 p-8 rounded-lg shadow-lg transform transition-transform lg:hover:scale-105 duration-300 border-none flex flex-col justify-evenly gap-2 md:h-[40vh] h-[55vh]">
-                <div>
-                  <CardContent className="p-0">
-                    <p className="text-gray-200">{service.description}</p>
-                  </CardContent>
-                </div>
-                <div className="items-center justify-center">
-                  <button
-                    className="p-4 rounded-full bg-green-800 text-white"
-                    onClick={() => handleFlip(index)}
-                  >
-                    Less Info
-                  </button>
-                </div>
-              </Card>
+                <Card className="bg-gray-600 p-8 rounded-lg shadow-lg transform transition-transform lg:hover:scale-105 duration-300 border-none flex flex-col justify-between md:h-[40vh] h-[55vh]">
+                  <div className="text-left">
+                    <CardTitle className="text-xl text-white font-semibold mb-4">
+                      {service.title}
+                    </CardTitle>
+                    <CardContent className="p-0 text-gray-200 whitespace-pre-line">
+                      {service.backContent}
+                    </CardContent>
+                  </div>
+                  <div className="flex justify-center">
+                    <button
+                      className="p-4 rounded-full bg-green-800 text-white"
+                      onClick={() => handleFlip(index)}
+                    >
+                      Less Info
+                    </button>
+                  </div>
+                </Card>
+
             </ReactCardFlip>
           ))}
         </div>
