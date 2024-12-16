@@ -97,8 +97,3 @@ body {
   }
 }
 
-
- @keyframes fill {
-  from {     height: 0%;   }
-   to {     height: 100%;  }
-} .animate-fill {   animation: fill 1s ease-out forwards; }
