@@ -1,75 +1,56 @@
 import React from "react";
-import dollar2 from "../public/dollar2.png";
 import Image from "next/image";
-import Link from "next/link";
-import { IoMailOutline } from "react-icons/io5";
-import { MdOutlinePhoneInTalk } from "react-icons/md";
+import { FaInstagram, FaFacebook } from "react-icons/fa";
+import logoImage from "../public/dollar1.png"; // Adjust path as needed
 
 export const Footer = () => {
   return (
-    <footer className="bg-transparent  dark:bg-gray-900 pt-12">
-      <div className="w-full  mx-auto p-4 md:py-8">
-        <div className="flex flex-col items-center justify-between md:flex-row gap-4 md:gap-0">
-          <Link href="/" passHref>
-            <div className="inline-block">
-              <Image
-                src={dollar2}
-                alt="logo"
-                className="md:h-[55px] h-[50px] w-auto  hover:cursor-pointer"
-                priority
-              />
-            </div>
-          </Link>
+    <footer className="bg-transparent text-white py-8">
+      <div className=" h-1  mb-10 bg-gray-400 shadow-blurred-white"></div>
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          {/* Left Section - Contact Information */}
+          <div className="flex flex-col items-center md:items-start gap-1 text-gray-400 mb-6 md:mb-0">
+            <span className="text-sm md:text-base">+123456789</span>
+            <span className="text-sm md:text-base">EMAIL@GMAIL.COM</span>
+          </div>
 
-          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-            <li>
-              <a href="#about" className="hover:underline me-4 md:me-6">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline me-4 md:me-6">
-                Companies
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Pricing
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="flex  items-center justify-center gap-8">
-          <div className="flex flex-col justify-between gap-4">
-            <Link href="mailto:info@ghaffarenterprises ">
-              <IoMailOutline className="bg-custom-gradient rounded-full md:text-3xl text-2xl animate-pulse" />
-            </Link>
-            <Link href="tel:+1 (630) 526-4000">
-              <MdOutlinePhoneInTalk className="bg-custom-gradient rounded-full md:text-3xl text-2xl animate-pulse" />
-            </Link>
+          {/* Center Section - Logo */}
+          <div className="mb-6 md:mb-0">
+            <Image
+              src={logoImage}
+              alt="Logo"
+              width={120} // Adjust size as needed
+              height={40}
+              priority
+            />
           </div>
-          <div className="flex flex-col  font-medium  justify-between gap-4">
-            <Link
-              href="mailto:info@ghaffarenterprises "
-              className="md:text-lg text-gray-400 text-lg"
+
+          {/* Right Section - Social Icons */}
+          <div className="flex gap-6 items-center">
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
             >
-              {" "}
-              email@gmail.com
-            </Link>
-            <Link href="tel:+1 (630) 526-4000" className="md:text-lg text-gray-400 text-lg">
-              {" "}
-              123456789
-            </Link>
+              <FaInstagram className="text-2xl hover:text-green-600" />
+            </a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+            >
+              <FaFacebook className="text-2xl hover:text-green-600" />
+            </a>
           </div>
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          © 2024{" "}
-          <a href="/" className="hover:underline">
-            Ghaffar Enterprises™
-          </a>
-          . All Rights Reserved.
-        </span>
+
+        {/* Footer Text */}
+        <div className="text-center text-gray-400 text-sm mt-6 lg:ml-20">
+          ALL RIGHTS RESERVED
+        </div>
       </div>
     </footer>
   );

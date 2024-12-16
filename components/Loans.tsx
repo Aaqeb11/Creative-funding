@@ -20,6 +20,8 @@ const servicesData = [
     description:
       "A DSCR Rental Loan is a long-term rental loan designed for real estate investors to purchase or refinance rental properties.",
       backContent: `
+      KEY REQUIREMENTS:
+
       Loan Amounts: $55k – $2M
       Property Types: 1-4 SFH,Conods,Townhomes
       Credit Score: Minimum 660+
@@ -33,6 +35,8 @@ const servicesData = [
     description:
       "Rehab Loans are ideal for those aiming to fix and flip properties or improve rental properties to increase their income potential.",
       backContent: `
+      KEY REQUIREMENTS:
+      
       Loan Amounts: $70k – $4M
       Property Types: 1-4 SFH,Conods,Townhomes
       Acquisition LTV: Up to 90%
@@ -47,6 +51,8 @@ const servicesData = [
     description:
       "Ground Up Loans cover the costs of land acquisition and construction, providing the necessary capital to bring new residential projects to life.",
       backContent: `
+      KEY REQUIREMENTS:
+      
       Loan Amounts: $100k – $4M
       Property Types: 1-4 SFH,Conods,Townhomes
       LTC: Up to 90%
@@ -60,6 +66,8 @@ const servicesData = [
     description:
       "Bridge Loans are short-term financing options designed to help real estate investors bridge the gap between the purchase of a new property and the sale of an existing one.",
       backContent: `
+      KEY REQUIREMENTS:
+      
       Loan Amounts: $75K – $4M
       Property Types: 1-4 SFH,Conods,Townhomes
       LTC: Up to 80%
@@ -73,6 +81,8 @@ const servicesData = [
     description:
       "This is a long-term rental : /n loan designed for real estate investors to refinance rental properties when there is already existing debt on the property.",
       backContent: `
+      KEY REQUIREMENTS:
+      
       Loan Amounts: $30K – $500K
       Property Types: 1-4 SFH,Conods,Townhomes
       DCSR Requirment: 1.1x minimum
@@ -87,6 +97,8 @@ const servicesData = [
     description:
       "A PML (Private Money Lender) loan provides flexible, short-term financing for real estate investors, offering fast approvals, competitive rates, and tailored solutions.",
       backContent: `
+      KEY REQUIREMENTS:
+      
       Loan Amounts: $75K – $1.5M
       Property Types: 1-4 SFH,Conods,Townhomes
       Loan to Cost: Up to 80%
@@ -101,6 +113,8 @@ const servicesData = [
     description:
       "An Earnest Money Deposit loan provides short-term financing for real estate investors to cover the earnest money required to secure a property under contract.",
       backContent: `
+      KEY REQUIREMENTS:
+      
       Loan Amounts: $1K – $10K
       Property Types: 1-4 SFH,Conods,Townhomes
       Loan Terms Negotiable
@@ -113,6 +127,8 @@ const servicesData = [
     description:
       "Personal real estate lending offers flexible financing for individuals looking to purchase, renovate, or improve their personal property.",
       backContent: `
+      KEY REQUIREMENTS:
+      
       Loan Amounts: $50K – $2M
       Purpose: Single Family Homes,condos,townhomes
       LTV: Up to 85% 
@@ -127,6 +143,8 @@ const servicesData = [
     description:
       "Looking to buy an existing business? Our business acquisition loans offer flexible financing solutions to help you secure the capital you need to purchase and grow an established business.",
       backContent: `
+      KEY REQUIREMENTS:
+      
       Loan Amounts: $50K – $2M
       Propertt Types: SIngle Family Homes,condos,townhomes
       LTV: Up to 85%
@@ -175,7 +193,7 @@ const Loans: React.FC = () => {
                 </div>
                 <div className="items-center justify-center">
                   <button
-                    className="p-4 rounded-full bg-green-800 text-white"
+                    className="p-4 rounded-full bg-transparent border border-white hover:bg-custom-gradient text-white"
                     onClick={() => handleFlip(index)}
                   >
                     More Info
@@ -194,7 +212,7 @@ const Loans: React.FC = () => {
                   </div>
                   <div className="flex justify-center">
                     <button
-                      className="p-4 rounded-full bg-green-800 text-white"
+                      className="p-4 rounded-full bg-transparent border border-white hover:bg-custom-gradient text-white"
                       onClick={() => handleFlip(index)}
                     >
                       Less Info

@@ -26,25 +26,7 @@ export default function Home() {
   const scope = useRef(null);
   useGSAP(
     () => {
-      t1.from("#intro_main", {
-        yPercent: -100,
-        duration: 1.3,
-        opacity: 0,
-        delay: 0.3,
-      })
-        .from("#intro_content", {
-          yPercent: 100,
-          duration: 1.0,
-          opacity: 0,
-          delay: 0.2,
-        })
-        .from("#intro_button", {
-          yPercent: 100,
-          duration: 1.0,
-          opacity: 0,
-          delay: 0.2,
-        });
-
+      
       // Loan Section Animation
       gsap.from("#loan_heading", {
         yPercent: -100,
