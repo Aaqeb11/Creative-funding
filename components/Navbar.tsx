@@ -114,9 +114,9 @@ const NavBar: React.FC = () => {
           <div className="hidden lg:block w-full">
             <button
               className="text-lg font-medium nav-font hover:bg-custom-gradient transition-colors w-full rounded-full h-[55px]"
-              onClick={() => scrollToSection("about")}
+              onClick={() => scrollToSection("loans")}
             >
-              ABOUT
+              LOANS
             </button>
           </div>
         </div>
@@ -129,7 +129,7 @@ const NavBar: React.FC = () => {
         ></div>
       )}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+        className={`fixed top-0 right-0 h-full w-64 opacity-90 bg-gray-500 shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } lg:hidden`}
       >
@@ -140,20 +140,20 @@ const NavBar: React.FC = () => {
               className="text-2xl"
               aria-label="Close menu"
             >
-              <IoMdClose className="text-[#FF8B00] text-4xl" />
+              <IoMdClose className="text-green-400 text-4xl" />
             </button>
           </div>
           <div className="flex flex-col gap-14 p-4">
             {items.map((item, index) => (
               <div className="relative" key={index}>
                 <div
-                  className="bg-[#FF8B00] absolute top-0 left-0 w-full h-full z-10 rounded-xl"
+                  className="bg-custom-gradient absolute top-0 left-0 w-full h-full z-10 rounded-xl"
                   ref={(el) => {
                     menuItemsRef.current[index] = el;
                   }}
                 ></div>
                 <button
-                  className="text-left border-gray-400 text-xl text-black border px-4 rounded-xl shadow-lg py-1 font-bold bg-white w-full"
+                  className="text-left border-gray-400 text-xl text-black border px-4 rounded-xl shadow-lg py-1 font-regular bg-white w-full"
                   onClick={() => toggleMenu(item.id.toLowerCase())}
                 >
                   {item.item}
@@ -163,7 +163,7 @@ const NavBar: React.FC = () => {
           </div>
           <div className="p-4">
             <button
-              className="w-full bg-[#FF8B00] border border-gray-300 py-3 rounded-xl text-lg font-medium text-white font-bold hover:border-[#FF8B00] hover:bg-white hover:text-[#FF8B00] transition duration-300"
+              className="w-full bg-custom-gradient border border-gray-300 py-3 rounded-xl text-lg font-regular text-white font-regular hover:border-[#FF8B00] hover:bg-white hover:text-[#FF8B00] transition duration-300"
               onClick={() => toggleMenu("form")}
             >
               Contact

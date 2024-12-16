@@ -49,7 +49,7 @@ const Form = () => {
   return (
     <>
       <form
-        className="flex flex-col w-[90%] mx-auto space-y-4 my-10"
+        className="flex flex-col w-[90%] mx-auto space-y-4 my-10 text-black"
         onSubmit={handleSubmit(onSubmit)}
       >
         <input
