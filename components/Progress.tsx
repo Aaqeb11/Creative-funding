@@ -3,31 +3,43 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import {
+  FaHandshake,
+  FaClipboardCheck,
+  FaWpforms,
+  FaFileContract,
+  FaStamp,
+} from "react-icons/fa"
 
 const cardData = [
   {
+    icon: FaClipboardCheck,
     id: 1,
-    title: "1",
+    title: "1.",
     content: "Prequalification",
   },
   {
+    icon: FaWpforms,
     id: 2,
-    title: "2",
+    title: "2.",
     content: "Complete Loan Application",
   },
   {
+    icon: FaFileContract,
     id: 3,
-    title: "3",
+    title: "3.",
     content: "Underwriting and Appraisal",
   },
   {
+    icon: FaStamp,
     id: 4,
-    title: "4",
+    title: "4.",
     content: "Conditional Approval",
   },
   {
+    icon: FaHandshake,
     id: 5,
-    title: "5",
+    title: "5.",
     content: "Loan Closing",
   },
 ];
@@ -126,7 +138,7 @@ const ProgressBar = () => {
                 >
                   {/* Dynamic Progress Overlay */}
                   <div
-                    className="dynamic-progress absolute top-0 left-0 w-full bg-green-800"
+                    className="dynamic-progress absolute top-0 left-0 w-full bg-custom-gradient"
                     style={{
                       height: "0%",
                       transition: "height 1.3s ease",
@@ -147,13 +159,19 @@ const ProgressBar = () => {
                   : "lg:right-[100px] right-[35px]"
               }`}
             >
+
+<div className="mb-4 text-white ">
+                    <card.icon className="w-12 h-12 mx-auto " />
+                  </div>
               <Card className="flex bg-gray-600 flex-col items-center justify-center text-center">
                 <CardHeader>
-                  <CardTitle className="text-5xl text-bold text-white">
+                
+                  <CardTitle className="text-3xl mt-2 mb-2 font-medium text-white">
                     {card.title}
                   </CardTitle>
+                  
                 </CardHeader>
-                <CardContent className="text-white">
+                <CardContent className="text-white text-2xl">
                   <p>{card.content}</p>
                 </CardContent>
               </Card>

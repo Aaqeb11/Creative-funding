@@ -20,6 +20,7 @@ import {
 } from "../components/ui/card";
 import { Footer } from "@/components/Footer";
 
+
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
   const t1 = gsap.timeline();
@@ -289,6 +290,10 @@ export default function Home() {
           Our trusted and tested process has been streamlined and perfected to perform better and and faster making your dream into a reality faster than ever
         </p>
         <ProgressBar />
+        <div>
+      
+
+    </div>
       </section>
       <div className=" h-1 bg-gray-400 shadow-blurred-white "></div>
       <section
