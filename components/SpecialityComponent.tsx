@@ -41,7 +41,7 @@ export const SpecialityComponent = () => {
 
       <div className="w-full flex justify-center ">
         <Card className="lg:w-[60vw] w-[80vw] bg-opacity-70 bg-[#999999] flex md:flex-row flex-col lg:justify-between justify-center items-center border-none">
-          <div className="lg:w-[60vw] md:w-[50vw] lg:h-full h-[60vw]">
+          <div className="lg:w-[60vw] md:w-[50vw] lg:h-full h-[80vw]">
             <CardHeader>
               <CardTitle className="md:text-5xl text-3xl text-white text-center">
                 {buttonData[selectedButton].title}
