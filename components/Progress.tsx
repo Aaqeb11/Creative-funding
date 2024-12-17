@@ -34,62 +34,75 @@ const cardData = [
 
 const ProgressBar = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const progressLineRefs = useRef<(HTMLDivElement | null)[]>([]);
+
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    // if (typeof window !== "undefined") {
     if (containerRef.current) {
-      // Animate Cards
-      const elements = gsap.utils.toArray(".attend_card");
-      elements.forEach((element: any, index: number) => {
-        gsap.set(element, {
+      // Ensure refs are properly typed and not undefined
+      const validCardRefs = cardRefs.current.filter(
+        (ref): ref is HTMLDivElement => ref !== null
+      );
+      const validProgressLines = progressLineRefs.current.filter(
+        (ref): ref is HTMLDivElement => ref !== null
+      );
+
+      validCardRefs.forEach((card, index) => {
+        // Animate each card
+        gsap.set(card, {
           clipPath: "inset(0 0 100% 0)",
           opacity: 0,
           y: 50,
         });
 
-        ScrollTrigger.create({
-          trigger: element,
-          start: "top 80%",
-          onEnter: () => {
-            gsap.to(element, {
-              clipPath: "inset(0 0 0% 0)",
-              opacity: 1,
-              y: 0,
-              duration: 1.3,
-              delay: index * 0.3, // Add stagger effect
-              ease: "power3.out",
-            });
-          },
-          once: true,
-        });
-      });
+        // Only create ScrollTrigger for cards before the last one
+        if (index < validCardRefs.length - 1) {
+          const progressLine = validProgressLines[index];
 
-      // Animate Progress Lines
-      const progressLines = gsap.utils.toArray(".progress_line");
-      progressLines.forEach((line: any, index: number) => {
-        gsap.set(line, {
-          height: "0%", // Start collapsed
-          opacity: 0,
-        });
+          ScrollTrigger.create({
+            trigger: card,
+            start: "top 80%",
+            onEnter: () => {
+              // Card animation
+              gsap.to(card, {
+                clipPath: "inset(0 0 0% 0)",
+                opacity: 1,
+                y: 0,
+                duration: 1.3,
+                ease: "power3.out",
+              });
 
-        ScrollTrigger.create({
-          trigger: line,
-          start: "top 80%",
-          onEnter: () => {
-            gsap.to(line, {
-              height: "100%",
-              opacity: 1,
-              duration: 1.3,
-              delay: index * 0.2, // Stagger effect for progress lines
-              ease: "power3.out",
-            });
-          },
-          once: true,
-        });
+              // Progress line animation
+              if (progressLine) {
+                const dynamicProgress = progressLine.querySelector(
+                  ".dynamic-progress"
+                ) as HTMLDivElement;
+                gsap.to(dynamicProgress, {
+                  height: "100%",
+                  duration: 1,
+                  ease: "power3.out",
+                });
+              }
+            },
+            onLeaveBack: () => {
+              // Reset animations when scrolling back
+              if (progressLine) {
+                const dynamicProgress = progressLine.querySelector(
+                  ".dynamic-progress"
+                ) as HTMLDivElement;
+                gsap.to(dynamicProgress, {
+                  height: "0%",
+                  duration: 0.5,
+                  ease: "power3.in",
+                });
+              }
+            },
+          });
+        }
       });
     }
-    // }
   }, []);
 
   return (
@@ -97,16 +110,37 @@ const ProgressBar = () => {
       className="w-full flex justify-center items-center min-h-screen mt-10"
       ref={containerRef}
     >
-      <div className="flex flex-col justify-center items-center ">
+      <div className="flex flex-col justify-center items-center">
         {cardData.map((card, index) => (
           <div key={index} className="w-full flex relative progress_line">
-            <div className="flex flex-col gap-0 ">
+            <div className="flex flex-col gap-0">
               <div className="h-5 w-5 rounded-full bg-custom-gradient"></div>
               {index !== cardData.length - 1 && (
-                <div className="h-40 w-1 bg-gray-600 mx-auto "></div>
+                <div
+                  ref={(el) => {
+                    if (progressLineRefs.current) {
+                      progressLineRefs.current[index] = el;
+                    }
+                  }}
+                  className="h-40 w-1 bg-gray-600 relative overflow-hidden mx-auto"
+                >
+                  {/* Dynamic Progress Overlay */}
+                  <div
+                    className="dynamic-progress absolute top-0 left-0 w-full bg-green-800"
+                    style={{
+                      height: "0%",
+                      transition: "height 1.3s ease",
+                    }}
+                  ></div>
+                </div>
               )}
             </div>
             <div
+              ref={(el) => {
+                if (cardRefs.current) {
+                  cardRefs.current[index] = el;
+                }
+              }}
               className={`absolute lg:w-[20vw] w-[40vw] attend_card ${
                 index % 2 === 0
                   ? "lg:left-[100px] left-[35px]"

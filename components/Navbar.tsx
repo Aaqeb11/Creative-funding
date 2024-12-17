@@ -4,6 +4,7 @@ import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import { gsap } from "gsap";
+import Image from "next/image";
 
 const NavBar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +14,8 @@ const NavBar: React.FC = () => {
   const items = [
     { item: "SERVICES", id: "services" },
     { item: "ABOUT", id: "about" },
-    // { item: "CONTACT", id: "form" },
+    { item: "LOANS", id: "loans" },
+    { item: "CONTACT", id: "contact" },
   ];
 
   const toggleMenu = (targetSectionId?: string) => {
@@ -66,22 +68,16 @@ const NavBar: React.FC = () => {
     <nav className="fixed top-[50px] left-0 right-0 bg-gray-400 z-50 h-[50px] lg:h-[60px] shadow-md w-[90%] lg:w-[50%] rounded-full mx-auto">
       <div className=" h-full flex items-center w-[100%] mx-auto">
         <div className="flex items-center lg:space-x-10 w-full lg:justify-center h-full rounded-full">
-          <div className="hidden lg:block w-full ">
-            <button
-              className="text-lg font-medium nav-font hover:bg-custom-gradient transition-colors w-full rounded-full h-[55px] "
-              onClick={() => scrollToSection("services")}
-            >
-              SERVICES
-            </button>
-          </div>
-          <div className="hidden lg:block w-full">
-            <button
-              className="text-lg font-medium nav-font hover:bg-custom-gradient  transition-colors w-full rounded-full h-[55px]"
-              onClick={() => scrollToSection("about")}
-            >
-              ABOUT
-            </button>
-          </div>
+          {items.slice(0, 2).map((item, index) => (
+            <div key={index} className="hidden lg:block w-full ">
+              <button
+                className="text-lg font-medium nav-font hover:bg-custom-gradient transition-colors w-full rounded-full h-[60px] "
+                onClick={() => scrollToSection(item.id)}
+              >
+                {item.item}
+              </button>
+            </div>
+          ))}
           <div className="lg:hidden pl-4">
             <button
               onClick={() => toggleMenu()}
@@ -97,28 +93,24 @@ const NavBar: React.FC = () => {
           <Link href="/" passHref>
             <div className="inline-block">
               {/* Logo placeholder */}
-              <div className="w-[100px] h-[50px] bg-gray-200">LOGO</div>
+              <Image src="/dollar2.png" alt="logo" width={100} height={100} />
             </div>
           </Link>
         </div>
 
         <div className="flex items-center space-x-10 w-full justify-center h-full rounded-full">
-          <div className="hidden lg:block w-full">
-            <button
-              className="text-lg font-medium nav-font hover:bg-custom-gradient transition-colors w-full rounded-full h-[55px]"
-              onClick={() => scrollToSection("form")}
-            >
-              CONTACT
-            </button>
-          </div>
-          <div className="hidden lg:block w-full">
-            <button
-              className="text-lg font-medium nav-font hover:bg-custom-gradient transition-colors w-full rounded-full h-[55px]"
-              onClick={() => scrollToSection("loans")}
-            >
-              LOANS
-            </button>
-          </div>
+          {items.slice(2).map((item, index) => (
+            <div key={index} className="hidden lg:block w-full">
+              <button
+                className="text-lg font-medium nav-font hover:bg-custom-gradient transition-colors w-full rounded-full h-[60px]"
+                onClick={() =>
+                  scrollToSection(item.id === "form" ? "contact" : item.id)
+                }
+              >
+                {item.item}
+              </button>
+            </div>
+          ))}
         </div>
       </div>
       {/* Mobile version */}
