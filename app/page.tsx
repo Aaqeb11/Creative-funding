@@ -19,8 +19,6 @@ import {
   CardContent,
 } from "../components/ui/card";
 import { Footer } from "@/components/Footer";
-
-
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
   const t1 = gsap.timeline();
@@ -184,7 +182,7 @@ export default function Home() {
              Flexible loans designed for you.
               Achieve your goals with ease and confidence.
           </p>
-          <div id="intro_button">
+          <div id="form_sec">
             <button className="px-6 py-3 bg-gray-200 text-black rounded-lg shadow-md hover:bg-gray-300 transition">
               Contact Us
             </button>

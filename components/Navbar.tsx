@@ -12,10 +12,10 @@ const NavBar: React.FC = () => {
   const menuItemsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   const items = [
-    { item: "SERVICES", id: "services" },
-    { item: "ABOUT", id: "about" },
-    { item: "LOANS", id: "loans" },
-    { item: "CONTACT", id: "contact" },
+    { item: "HOME", id: "intro_main" },
+    { item: "PROCESS", id: "process_sec" },
+    { item: "LOANS", id: "loan_sec" },
+    { item: "CONTACT", id: "form_section" },
   ];
 
   const toggleMenu = (targetSectionId?: string) => {
