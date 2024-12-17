@@ -182,9 +182,9 @@ export default function Home() {
              Flexible loans designed for you.
               Achieve your goals with ease and confidence.
           </p>
-          <div id="form_sec">
+          <div id="intro_button">
             <button className="px-6 py-3 bg-gray-200 text-black rounded-lg shadow-md hover:bg-gray-300 transition">
-              Contact Us
+              Contact Us {/*add button functionality*/}
             </button>
           </div>
         </div>
