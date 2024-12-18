@@ -19,6 +19,7 @@ import {
   CardContent,
 } from "../components/ui/card";
 import { Footer } from "@/components/Footer";
+import Form2 from "@/components/Form2";
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
   const t1 = gsap.timeline();
