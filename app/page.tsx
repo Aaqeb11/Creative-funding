@@ -184,9 +184,13 @@ export default function Home() {
               Achieve your goals with ease and confidence.
           </p>
           <div id="intro_button">
-            <button className="px-6 py-3 bg-gray-200 text-black rounded-lg shadow-md hover:bg-gray-300 transition">
-              Contact Us {/*add button functionality*/}
-            </button>
+          <button 
+  className="px-6 py-3 bg-gray-200 text-black rounded-lg shadow-md hover:bg-gray-300 transition"
+  onClick={() => document.getElementById('form_sec')?.scrollIntoView({ behavior: 'smooth' })}
+>
+  Contact Us
+</button>
+
           </div>
         </div>
       </main>

@@ -155,8 +155,8 @@ const NavBar: React.FC = () => {
           </div>
           <div className="p-4">
             <button
-              className="w-full bg-custom-gradient border border-gray-300 py-3 rounded-xl text-lg font-regular text-white font-regular hover:border-[#FF8B00] hover:bg-white hover:text-[#FF8B00] transition duration-300"
-              onClick={() => toggleMenu("form")}
+              className="w-full bg-custom-gradient border border-gray-300 py-3 rounded-xl text-lg font-regular text-white font-regular hover:border-white hover:bg-gray-600 hover:text-white transition duration-300"
+              onClick={() => toggleMenu("form_sec")}
             >
               Contact
             </button>
