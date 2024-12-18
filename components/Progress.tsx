@@ -9,7 +9,7 @@ import {
   FaWpforms,
   FaFileContract,
   FaStamp,
-} from "react-icons/fa"
+} from "react-icons/fa";
 
 const cardData = [
   {
@@ -70,7 +70,7 @@ const ProgressBar = () => {
         });
 
         // Only create ScrollTrigger for cards before the last one
-        if (index < validCardRefs.length - 1) {
+        if (index < validCardRefs.length) {
           const progressLine = validProgressLines[index];
 
           ScrollTrigger.create({
@@ -119,12 +119,12 @@ const ProgressBar = () => {
 
   return (
     <div
-      className="w-full flex justify-center items-center min-h-screen mt-10"
+      className="w-full flex justify-center items-center min-h-screen lg:my-10 md:my-14 my-16"
       ref={containerRef}
     >
       <div className="flex flex-col justify-center items-center">
         {cardData.map((card, index) => (
-          <div key={index} className="w-full flex relative progress_line">
+          <div key={index} className="w-full flex relative progress_line ">
             <div className="flex flex-col gap-0">
               <div className="h-5 w-5 rounded-full bg-custom-gradient"></div>
               {index !== cardData.length - 1 && (
@@ -159,19 +159,16 @@ const ProgressBar = () => {
                   : "lg:right-[100px] right-[35px]"
               }`}
             >
-
-<div className="mb-4 text-white ">
-                    <card.icon className="w-12 h-12 mx-auto " />
-                  </div>
-              <Card className="flex bg-gray-600 flex-col items-center justify-center text-center">
+              <div className="mb-4 text-white ">
+                <card.icon className="w-12 h-12 mx-auto " />
+              </div>
+              <Card className="flex bg-gray-600 flex-col items-center justify-center text-center md:min-h-[10vh] min-h-[30vh] ">
                 <CardHeader>
-                
-                  <CardTitle className="text-3xl mt-2 mb-2 font-medium text-white">
+                  <CardTitle className="md:text-3xl text-xl mt-2 mb-2 font-medium text-white">
                     {card.title}
                   </CardTitle>
-                  
                 </CardHeader>
-                <CardContent className="text-white text-2xl">
+                <CardContent className="text-white md:text-2xl text-lg">
                   <p>{card.content}</p>
                 </CardContent>
               </Card>
