@@ -261,7 +261,7 @@ export default function Home() {
           className="text-md md:text-xl lg:max-w-2xl max-w-lg px-2 mt-2 text-center"
           id="loan_content"
         >
-          Choose from the plethora of loans we provide and their Criterias
+          Choose from the plethora of loans we provide and their criterias
         </p>
         <Loans />
       </section>
@@ -285,7 +285,7 @@ export default function Home() {
           className="text-md md:text-xl lg:max-w-2xl max-w-lg mt-2 text-center text-white px-2"
           id="process_content"
         >
-          Our trusted and tested process has been streamlined and perfected to perform better and and faster making your dream into a reality faster than ever
+          Our trusted and tested process has been streamlined to perform better and faster turning your dream into reality smoother than ever
         </p>
         <ProgressBar />
         <div>

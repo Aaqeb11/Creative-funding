@@ -162,9 +162,9 @@ const ProgressBar = () => {
               <div className="mb-4 text-white ">
                 <card.icon className="w-12 h-12 mx-auto " />
               </div>
-              <Card className="flex bg-gray-600 flex-col items-center justify-center text-center md:min-h-[10vh] min-h-[30vh] ">
+              <Card className="flex bg-gray-600 flex-col items-center justify-center text-center md:min-h-[10vh] min-h-[25vh] ">
                 <CardHeader>
-                  <CardTitle className="md:text-3xl text-xl mt-2 mb-2 font-medium text-white">
+                  <CardTitle className="md:text-3xl text-xl mt-0 mb-0 font-medium text-white">
                     {card.title}
                   </CardTitle>
                 </CardHeader>

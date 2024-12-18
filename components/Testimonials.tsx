@@ -17,7 +17,7 @@ const Testimonials = () => {
       description:
         "Quick funding for property renovation. ",
       backDescription:
-        "I found a distressed property in a prime location, but I lacked the funds for renovation. SubTo Money Hub for help, and they provided me with a Rehab Loan that covered both the purchase and the renovation.",
+        "I found a distressed property in a prime location, but I lacked the funds for renovation. Creative Funding for help, and they provided me with a Rehab Loan that covered both the purchase and the renovation.",
       badge: "Adam M",
       image: "/test1.jpg",
     },
@@ -25,7 +25,7 @@ const Testimonials = () => {
       title: "DCSR Loan",
       description: "Fast, flexible financing for rentals.",
       backDescription:
-        "I wanted to expand my rental portfolio and needed a reliable financing option. SubTo Money Hub offered me a DSCR Rental Loan, which enabled me to purchase a new rental property. The loan terms were flexible, and the approval process was fast.",
+        "I wanted to expand my rental portfolio and needed a reliable financing option. Creative Funding offered me a DSCR Rental Loan, which enabled me to purchase a new rental property. The loan terms were flexible, and the approval process was fast.",
       badge: "Karl T",
       image: "/test2.jpg",
     },
@@ -41,7 +41,7 @@ const Testimonials = () => {
       title: "Bridge Loan",
       description: "Immediate funding for prime opportunity",
       backDescription:
-        "When I came across a prime investment opportunity, I knew I had to act fast. However, my capital was tied up in another property that hadn't sold yet. SubTo Money Hub came through with a Bridge Loan that gave me the immediate funds I needed.",
+        "When I came across a prime investment opportunity, I knew I had to act fast. However, my capital was tied up in another property that hadn't sold yet. Creative Funding came through with a Bridge Loan that gave me the immediate funds I needed.",
       badge: "Michael W",
       image: "/test4.jpg",
     },

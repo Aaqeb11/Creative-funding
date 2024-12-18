@@ -14,14 +14,14 @@ export const SpecialityStore = new Store({
   buttonData: {
     Easy: {
       title: "Easy Process",
-      description:"we've streamlined our lending process to be as simple and quick as possible. Whether you need funding for a project or a personal loan, our easy application and fast approval system ensure you get the money you need without unnecessary hurdles.",
-      content: "we've streamlined our lending process to be as simple and quick as possible. Whether you need funding for a project or a personal loan, our easy application and fast approval system ensure you get the money you need without unnecessary hurdles.",
+      description:"We've streamlined our lending process to be as simple and quick as possible. Whether you need funding for a project or a personal loan, our easy application and fast approval system ensures you get the money you need without unnecessary hurdles.",
+      content: "We've streamlined our lending process to be as simple and quick as possible. Whether you need funding for a project or a personal loan, our easy application and fast approval system ensures you get the money you need without unnecessary hurdles.",
       footer: "Footer information for Button 1",
     },
     Trust: {
       title: "Trustworthy Service",
-      description: "we prioritize building trust with our clients. Our transparent terms, ethical practices, and commitment to your financial well-being ensure you can rely on us for all your lending needs.",
-      content: "we prioritize building trust with our clients. Our transparent terms, ethical practices, and commitment to your financial well-being ensure you can rely on us for all your lending needs.",
+      description: "We prioritize building trust with our clients. Our transparent terms, ethical practices, and commitment to your financial well-being ensures you can rely on us for all your lending needs.",
+      content: "We prioritize building trust with our clients. Our transparent terms, ethical practices, and commitment to your financial well-being ensures you can rely on us for all your lending needs.",
       footer: "Footer information for Button 2",
     },
     Available: {

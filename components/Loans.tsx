@@ -23,10 +23,10 @@ const servicesData = [
       KEY REQUIREMENTS:
 
       Loan Amounts: $55k – $2M
-      Property Types: 1-4 SFH,Conods,Townhomes
+      Property Types: 1 - 4 SFH, Conods, Townhomes
       Credit Score: Minimum 660+
       Long Terms: 30 Year fixed Rate , ARMS and interest-Only
-      Cashout Options: 75% Cashout Available on all Unleased or Vacant Properties
+      Cashout Options: 75% Cashout available on all unleased or vacant properties
     `,
   },
   {
@@ -38,7 +38,7 @@ const servicesData = [
       KEY REQUIREMENTS:
       
       Loan Amounts: $70k – $4M
-      Property Types: 1-4 SFH,Conods,Townhomes
+      Property Types: 1 - 4 SFH, Conods, Townhomes
       Acquisition LTV: Up to 90%
       Rehab Budget LTV: Up to 100%
       Monthly Payments: Rolled into the loan to ease cash flow management 
@@ -54,10 +54,10 @@ const servicesData = [
       KEY REQUIREMENTS:
       
       Loan Amounts: $100k – $4M
-      Property Types: 1-4 SFH,Conods,Townhomes
+      Property Types: 1 - 4 SFH, Conods, Townhomes
       LTC: Up to 90%
       LTARV: Up to 75% 
-      Loan Terms:12-24 Month terms available
+      Loan Terms:12 - 24 Month terms available
     `,
   },
   {
@@ -69,10 +69,10 @@ const servicesData = [
       KEY REQUIREMENTS:
       
       Loan Amounts: $75K – $4M
-      Property Types: 1-4 SFH,Conods,Townhomes
+      Property Types: 1 - 4 SFH, Conods, Townhomes
       LTC: Up to 80%
       No Asset Verification: Streamlined application process with minimal documentation(restrictions apply)  
-      Loan Terms:6-24 Month terms available
+      Loan Terms:6-24 month terms available
     `,
   },
   {
@@ -84,11 +84,11 @@ const servicesData = [
       KEY REQUIREMENTS:
       
       Loan Amounts: $30K – $500K
-      Property Types: 1-4 SFH,Conods,Townhomes
+      Property Types: 1 - 4 SFH, Conods, Townhomes
       DCSR Requirment: 1.1x minimum
       Loan Terms:30-year fixed
       Cashout Option: Up to 85% combined loan to value(CLTV)
-      Cashout available on unleased or vacant properties
+      cashout available on unleased or vacant properties
     `,
   },
   {
@@ -100,11 +100,11 @@ const servicesData = [
       KEY REQUIREMENTS:
       
       Loan Amounts: $75K – $1.5M
-      Property Types: 1-4 SFH,Conods,Townhomes
+      Property Types: 1 - 4 SFH, Conods, Townhomes
       Loan to Cost: Up to 80%
       Loan to ARV: Up to 70%
       Cashout Option: 6-18 months terms available
-      Quick Closing Timeline
+      quick closing timeline
     `,
   },
   {
@@ -116,8 +116,8 @@ const servicesData = [
       KEY REQUIREMENTS:
       
       Loan Amounts: $1K – $10K
-      Property Types: 1-4 SFH,Conods,Townhomes
-      Loan Terms Negotiable
+      Property Types: 1 - 4 SFH, Conods, Townhomes
+      Loan Terms: Negotiable
     `,
   },
   {
@@ -129,10 +129,10 @@ const servicesData = [
       KEY REQUIREMENTS:
       
       Loan Amounts: $50K – $2M
-      Purpose: Single Family Homes,condos,townhomes
+      Property Types: Single Family Homes, condos, townhomes
       LTV: Up to 85% 
       Income Verification: Proof of stable income or employment required
-      Loan Terms: 12-60 months available
+      Loan Terms: 12 - 60 months available
       Credit Rquirements: Minimum credit score of 680
     `,
   },
@@ -144,12 +144,12 @@ const servicesData = [
     backContent: `
       KEY REQUIREMENTS:
       
-      Loan Amounts: $50K – $2M
-      Propertt Types: SIngle Family Homes,condos,townhomes
-      LTV: Up to 85%
-      Income Verfication: Proof of stable income or employment required
-      Loan Terms: 12-60 months Available
-      Credit Requirements: Minimum credit score of 680
+      Loan Amounts: $100K - $5M
+      Property Types: Single-family homes, condos, townhomes
+      Loan Amounts: $100K - $5M
+      Loan Terms: 12-60 months
+      Eligibility: Minimum 2 years in business (for acquisition target)
+      Use of Funds: Business acquisition, working capital, equipment purchases
     `,
   },
 ];
