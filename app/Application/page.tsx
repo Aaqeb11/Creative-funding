@@ -25,13 +25,13 @@ export default function Home() {
           className="text-3xl md:text-4xl font-semibold mt-6 mb-4 text-center"
           id="form_heading"
         >
-          Step closer towards success
+          Your last step to financial freedom
         </h2>
         <p
           className="text-md md:text-xl lg:max-w-2xl max-w-lg mt-2 text-center text-white px-2"
           id="form_section"
         >
-          Get started today by filling out our easy application form and take the first step toward your financial solution.
+         Fill out our detailed form to help us find you the right deal
         </p>
         <Form2/>
       </section>
