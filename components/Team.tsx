@@ -8,7 +8,7 @@ const Teams: React.FC = () => {
           {/* Card 1 */}
           <div className="bg-transparent p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 duration-300">
             <img
-              src="/pace.png" // Replace with your image path
+              src="/team1.jpg" // Replace with your image path
               alt="Personal Loan"
               className="w-[70%] h-[70%] mx-auto object-cover rounded-full mb-4"
             />
@@ -21,7 +21,7 @@ const Teams: React.FC = () => {
           {/* Card 2 */}
           <div className="bg-transparent p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 duration-300">
             <img
-              src="/pace.png" // Replace with your image path
+              src="/team2.jpg" // Replace with your image path
               alt="Business Loan"
               className="w-[70%] h-[70%] mx-auto object-cover rounded-full mb-4"
             />
@@ -34,7 +34,19 @@ const Teams: React.FC = () => {
           {/* Card 3 */}
           <div className="bg-transparent p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 duration-300">
             <img
-              src="/pace.png" // Replace with your image path
+              src="/team3.jpg" // Replace with your image path
+              alt="Home Loan"
+              className="w-[70%] h-[70%] mx-auto object-cover rounded-full mb-4"
+            />
+            <h3 className="text-xl font-semibold mb-2">Home Loan</h3>
+            <p className="text-gray-600">
+              Make your dream home a reality with low-interest rates and flexible EMI options.
+            </p>
+          </div>
+          {/* Card 4 */}
+          <div className="bg-transparent p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 duration-300">
+            <img
+              src="/team4.jpg" // Replace with your image path
               alt="Home Loan"
               className="w-[70%] h-[70%] mx-auto object-cover rounded-full mb-4"
             />
