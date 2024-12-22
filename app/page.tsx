@@ -20,13 +20,32 @@ import {
 } from "../components/ui/card";
 import { Footer } from "@/components/Footer";
 import Form2 from "@/components/Form2";
+import IntroCarousel from "@/components/IntroCarousel";
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
   const t1 = gsap.timeline();
   const scope = useRef(null);
   useGSAP(
     () => {
-      
+      t1.from("#intro_main", {
+        yPercent: -100,
+        duration: 1.3,
+        opacity: 0,
+        delay: 0.3,
+      })
+        .from("#intro_content", {
+          yPercent: 100,
+          duration: 1.0,
+          opacity: 0,
+          delay: 0.2,
+        })
+        .from("#intro_button", {
+          yPercent: 100,
+          duration: 1.0,
+          opacity: 0,
+          delay: 0.2,
+        });
+
       // Loan Section Animation
       gsap.from("#loan_heading", {
         yPercent: -100,
@@ -160,42 +179,60 @@ export default function Home() {
           width={100}
           height={100}
           alt="dollar"
-          className="absolute md:top-0 top-10 w-[300px] -left-8 md:left-20 md:w-[500px]  z-0"
+          className="absolute md:top-0 top-10 2xl:top-[260px] w-[300px] -left-8 md:left-[5px] md:w-[380px]  z-0"
         />
         <Image
           src="/dollar1.png"
           width={100}
           height={100}
           alt="dollar"
-          className="absolute z-0 md:top-[300px] md:right-14 md:w-[300px] right-1 w-[180px] bottom-32"
+          className="absolute z-0 md:top-[300px] 2xl:top-[550px] md:left-[410px] 2xl:left-[800px] md:w-[220px] right-1 w-[180px] bottom-32"
         />
-        <div className="relative text-center z-10">
-          <h1
-            className="text-5xl lg:text-8xl font-light p-4 mb-4 text-center"
-            id="intro_main"
-          >
-            CREATIVE FUNDING
-          </h1>
-          <p
-            className="text-md md:text-xl p-4 mb-6 max-w-lg mx-auto"
-            id="intro_content"
-          >
-             Flexible loans designed for you.
-              Achieve your goals with ease and confidence.
-          </p>
-          <div id="intro_button">
-          <button 
-  className="px-6 py-3 bg-gray-200 text-black rounded-lg shadow-md hover:bg-gray-300 transition"
-  onClick={() => document.getElementById('form_sec')?.scrollIntoView({ behavior: 'smooth' })}
->
-  Contact Us
-</button>
-
+        <div className="relative flex md:flex-row flex-col items-center justify-between z-10 w-full h-full md:gap-0">
+          <div className="flex flex-col items-center w-full md:px-16 ">
+            <div className="w-[100%]">
+              <h1
+                className="text-5xl lg:text-8xl font-light p-4 mb-4 md:text-left text-center"
+                id="intro_main"
+              >
+                CREATIVE FUNDING
+              </h1>
+            </div>
+            <div className="w-[100%]">
+              <p
+                className="text-md md:text-xl mb-6 max-w-lg md:text-left text-center w-full p-4"
+                id="intro_content"
+              >
+                Flexible loans designed for you. Achieve your goals with ease
+                and confidence.
+              </p>
+            </div>
+            <div
+              id="intro_button"
+              className="w-[100%] p-4 flex md:justify-start justify-center"
+            >
+              <button
+                className="px-6 py-3 bg-gray-200 text-black rounded-lg shadow-md hover:bg-gray-300 transition"
+                onClick={() =>
+                  document
+                    .getElementById("form_sec")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                Contact Us
+              </button>
+            </div>
+          </div>
+          <div className="flex items-center w-full md:px-4 px-2 md:flex hidden">
+            <IntroCarousel />
           </div>
         </div>
       </main>
       {/* New Section*/}
       <section className="flex flex-col justify-center lg:gap-14  gap-6 -mt-16 lg:-mt-0">
+        <div className="flex items-center w-full md:px-4 px-2 md:hidden flex">
+          <IntroCarousel />
+        </div>
         <div className="">
           <LogoSlider />
         </div>
@@ -214,7 +251,9 @@ export default function Home() {
               <p className="text-xl text-white text-center ">Business</p>
             </div>
             <div className="flex flex-col">
-              <p className="lg:text-7xl text-white md:text-4xl text-2xl text-center">48</p>
+              <p className="lg:text-7xl text-white md:text-4xl text-2xl text-center">
+                48
+              </p>
               <p className="text-xl text-white text-center">Business</p>
             </div>
           </Card>
@@ -222,7 +261,33 @@ export default function Home() {
       </section>
       <div className=" h-1 mt-10 bg-gray-400 shadow-blurred-white"></div>
       <section
-        className="relative  flex flex-col items-center text-white mt-16 "
+        className="relative flex flex-col items-center text-white mt-16"
+        id="loan_sec"
+      >
+        <div className="mb-4">
+          <span className="px-6 py-2 bg-custom-gradient text-white font-semibold rounded-full">
+            LOANS
+          </span>
+        </div>
+        <h2
+          className="text-3xl md:text-4xl font-semibold mt-6 mb-4 text-center"
+          id="loan_heading"
+        >
+          Type Of Loans We Offer
+        </h2>
+        <p
+          className="text-md md:text-xl lg:max-w-2xl max-w-lg px-2 mt-2 text-center"
+          id="loan_content"
+        >
+          Choose from the plethora of loans we provide and their criterias
+        </p>
+        <Loans />
+      </section>
+
+      {/* New Section */}
+      <div className=" h-1 bg-gray-400 shadow-blurred-white mt-10"></div>
+      <section
+        className="relative  flex flex-col items-center text-white my-16 "
         id="speciality_sec"
       >
         <div className="mb-4">
@@ -245,31 +310,6 @@ export default function Home() {
         <SpecialityComponent />
       </section>
 
-      {/* New Section */}
-      <div className=" h-1 bg-gray-400 shadow-blurred-white mt-10"></div>
-      <section
-        className="relative flex flex-col items-center text-white my-16"
-        id="loan_sec"
-      >
-        <div className="mb-4">
-          <span className="px-6 py-2 bg-custom-gradient text-white font-semibold rounded-full">
-            LOANS
-          </span>
-        </div>
-        <h2
-          className="text-3xl md:text-4xl font-semibold mt-6 mb-4 text-center"
-          id="loan_heading"
-        >
-          Type Of Loans We Offer
-        </h2>
-        <p
-          className="text-md md:text-xl lg:max-w-2xl max-w-lg px-2 mt-2 text-center"
-          id="loan_content"
-        >
-          Choose from the plethora of loans we provide and their criterias
-        </p>
-        <Loans />
-      </section>
       <div className=" h-1 bg-gray-400 shadow-blurred-white"></div>
       <section
         className="min-h-screen relative flex flex-col justify-center items-center lg:my-16 lg:mb-[20vh] mb-[40vh] my-16"
@@ -284,19 +324,17 @@ export default function Home() {
           className="text-3xl md:text-4xl font-semibold mt-6 mb-4 text-white text-center"
           id="process_heading"
         >
-          Our process makes funding easier 
+          Our process makes funding easier
         </h2>
         <p
           className="text-md md:text-xl lg:max-w-2xl max-w-lg mt-2 text-center text-white px-2"
           id="process_content"
         >
-          Our trusted and tested process has been streamlined to perform better and faster turning your dream into reality smoother than ever
+          Our trusted and tested process has been streamlined to perform better
+          and faster turning your dream into reality smoother than ever
         </p>
         <ProgressBar />
-        <div>
-      
-
-    </div>
+        <div></div>
       </section>
       <div className=" h-1 bg-gray-400 shadow-blurred-white "></div>
       <section
@@ -316,7 +354,7 @@ export default function Home() {
         </h2>
         <Teams />
       </section>
-      
+
       <div className=" h-1 bg-gray-400 shadow-blurred-white"></div>
       <section
         className="relative  flex flex-col items-center text-white my-16 "
@@ -337,7 +375,8 @@ export default function Home() {
           className="text-md md:text-xl lg:max-w-2xl max-w-lg mt-2 text-center text-white px-2"
           id="testmonial_content"
         >
-          Hear from our satisfied customers who have experienced the benfit of using our services and what their dreams have become 
+          Hear from our satisfied customers who have experienced the benfit of
+          using our services and what their dreams have become
         </p>
         <Testimonials />
       </section>
@@ -361,7 +400,8 @@ export default function Home() {
           className="text-md md:text-xl lg:max-w-2xl max-w-lg mt-2 text-center text-white px-2"
           id="form_section"
         >
-          Get started today by filling out our easy application form and take the first step toward your financial solution.
+          Get started today by filling out our easy application form and take
+          the first step toward your financial solution.
         </p>
         <Form />
       </section>
