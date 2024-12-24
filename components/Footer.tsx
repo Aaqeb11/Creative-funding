@@ -11,8 +11,7 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Left Section - Contact Information */}
           <div className="flex flex-col items-center md:items-start gap-1 text-gray-400 mb-6 md:mb-0">
-            <span className="text-sm md:text-base">+123456789</span>
-            <span className="text-sm md:text-base">EMAIL@GMAIL.COM</span>
+            <span className="text-lg md:text-xl">EMAIL@GMAIL.COM</span>
           </div>
 
           {/* Center Section - Logo */}
