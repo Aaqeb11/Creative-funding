@@ -5,7 +5,7 @@ const Teams: React.FC = () => {
   return (
     <section className="py-16 text-center">
       <div className="mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Card 1 */}
           <div className="bg-transparent p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 duration-300">
             <Image
