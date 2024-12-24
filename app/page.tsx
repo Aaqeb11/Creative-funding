@@ -19,7 +19,6 @@ import {
   CardContent,
 } from "../components/ui/card";
 import { Footer } from "@/components/Footer";
-import Form2 from "@/components/Form2";
 import IntroCarousel from "@/components/IntroCarousel";
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
@@ -228,37 +227,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-      {/* New Section*/}
-      <section className="flex flex-col justify-center lg:gap-14  gap-6 -mt-16 lg:-mt-0">
-        <div className="flex items-center w-full md:px-4 px-2 md:hidden flex">
-          <IntroCarousel />
-        </div>
-        <div className="">
-          <LogoSlider />
-        </div>
-        <div className="w-full flex items-center justify-center  ">
-          <Card className="lg:w-[70%] w-[90%] bg-gray-600 gap-4 flex items-center justify-center lg:gap-[14vw]  rounded-full p-2">
-            <div className="flex flex-col">
-              <p className="lg:text-7xl text-white md:text-4xl text-2xl  text-center">
-                48
-              </p>
-              <p className="text-xl text-white text-center ">Business</p>
-            </div>
-            <div className="flex flex-col">
-              <p className="lg:text-7xl text-white md:text-4xl text-2xl  text-center">
-                48
-              </p>
-              <p className="text-xl text-white text-center ">Business</p>
-            </div>
-            <div className="flex flex-col">
-              <p className="lg:text-7xl text-white md:text-4xl text-2xl text-center">
-                48
-              </p>
-              <p className="text-xl text-white text-center">Business</p>
-            </div>
-          </Card>
-        </div>
-      </section>
       <div className=" h-1 mt-10 bg-gray-400 shadow-blurred-white"></div>
       <section
         className="relative flex flex-col items-center text-white mt-16"
