@@ -16,7 +16,7 @@ const cardData = [
     icon: FaClipboardCheck,
     id: 1,
     title: "1.",
-    content: "Prequalification",
+    content: "Deal Review",
   },
   {
     icon: FaWpforms,
@@ -28,7 +28,7 @@ const cardData = [
     icon: FaFileContract,
     id: 3,
     title: "3.",
-    content: "Underwriting and Appraisal",
+    content: "Underwriting",
   },
   {
     icon: FaStamp,
