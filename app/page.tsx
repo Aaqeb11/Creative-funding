@@ -194,7 +194,7 @@ export default function Home() {
                 className="text-5xl lg:text-8xl font-light p-4 mb-4 md:text-left text-center"
                 id="intro_main"
               >
-                CREATIVE FUNDING
+              One stop solutions to your financial needs
               </h1>
             </div>
             <div className="w-[100%]">
@@ -218,7 +218,7 @@ export default function Home() {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                Contact Us
+                Request Here
               </button>
             </div>
           </div>
