@@ -79,8 +79,8 @@ const Testimonials = () => {
                 <Image
                   src={card.image}
                   alt={card.title}
-                  width={600}
-                  height={600}
+                  width={800}
+                  height={800}
                   quality={100}
                   className="w-full rounded-lg md:h-[75vh] h-[80vh] z-0 object-cover"
                 />

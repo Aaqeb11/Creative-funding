@@ -88,8 +88,8 @@ const IntroCarousel = () => {
                 <Image
                   src={card.image}
                   alt={card.title}
-                  width={600}
-                  height={600}
+                  width={800}
+                  height={800}
                   quality={100}
                   className="w-full rounded-2xl md:h-[65vh] h-[70vh] z-0 object-cover"
                 />
