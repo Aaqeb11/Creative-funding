@@ -194,7 +194,7 @@ export default function Home() {
                 className="text-5xl lg:text-8xl font-light p-4 mb-4 md:text-left text-center"
                 id="intro_main"
               >
-              One stop solutions to your financial needs
+              Need A Loan Now ?
               </h1>
             </div>
             <div className="w-[100%]">
@@ -218,7 +218,7 @@ export default function Home() {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                Request Here
+                Request Funds Here
               </button>
             </div>
           </div>
@@ -243,12 +243,7 @@ export default function Home() {
         >
           Type Of Loans We Offer
         </h2>
-        <p
-          className="text-md md:text-xl lg:max-w-2xl max-w-lg px-2 mt-2 text-center"
-          id="loan_content"
-        >
-          Choose from the plethora of loans we provide and their criterias
-        </p>
+        
         <Loans />
       </section>
 
@@ -267,7 +262,7 @@ export default function Home() {
           className="text-3xl md:text-4xl font-semibold mt-6 mb-4 text-center"
           id="speciality_heading"
         >
-          Why Chose Us
+          What Makes Us Different
         </h2>
         <p
           className="text-md md:text-xl lg:max-w-2xl max-w-lg mt-2 text-center text-white px-2"
@@ -337,7 +332,7 @@ export default function Home() {
           className="text-3xl md:text-4xl font-semibold mt-6 mb-4 text-center"
           id="testimonial_heading"
         >
-          Our projects speak our proof
+          What Clients Are Saying
         </h2>
         <p
           className="text-md md:text-xl lg:max-w-2xl max-w-lg mt-2 text-center text-white px-2"

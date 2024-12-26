@@ -17,7 +17,12 @@ const Teams: React.FC = () => {
               className=" w-[230px] h-[230px] lg:w-[70%] lg:h-[70%] mx-auto object-cover rounded-full mb-4"
             />
             <h3 className="text-xl font-semibold mb-2">Pace Morby</h3>
-           
+            <p className="text-gray-600">
+              
+              Real Estate Investor | TV Show Host | Author
+
+              Teaching Financial Freedom Through Creative Finance 
+            </p>
           </div>
 
           {/* Card 2 */}
@@ -44,7 +49,7 @@ const Teams: React.FC = () => {
               quality={100}
               className=" w-[230px] h-[230px] lg:w-[70%] lg:h-[70%] mx-auto object-cover rounded-full mb-4"
             />
-            <h3 className="text-xl font-semibold mb-2">Heather</h3>
+            <h3 className="text-xl font-semibold mb-2">Heather Kiddo</h3>
             
           </div>
           {/* Card 4 */}
@@ -57,7 +62,7 @@ const Teams: React.FC = () => {
               quality={100}
               className=" w-[230px] h-[230px] lg:w-[70%] lg:h-[70%] mx-auto object-cover rounded-full mb-4"
             />
-            <h3 className="text-xl font-semibold mb-2">Nathan</h3>
+            <h3 className="text-xl font-semibold mb-2">Nathan Barnes</h3>
             
           </div>
         </div>
