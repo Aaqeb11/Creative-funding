@@ -18,26 +18,26 @@ const Form2 = () => {
   return (
     <div className="w-full h-auto my-10">
       <iframe
-        src="https://api.leadconnectorhq.com/widget/form/QkztWmT1XcJrz4ZZ7UiF"
+        src="https://api.leadconnectorhq.com/widget/form/UmnsA8KFg6qOYeP87QDu"
         style={{
           width: "100%",
           height: "100%",
           border: "none",
           borderRadius: "3px",
         }}
-        id="inline-QkztWmT1XcJrz4ZZ7UiF" 
-        data-layout="{'id':'INLINE'}"
-        data-trigger-type="alwaysShow"
-        data-trigger-value=""
-        data-activation-type="alwaysActivated"
-        data-activation-value=""
-        data-deactivation-type="neverDeactivate"
-        data-deactivation-value=""
-        data-form-name="Creative Funding form2"
-        data-height="1281"
-        data-layout-iframe-id="inline-QkztWmT1XcJrz4ZZ7UiF"
-        data-form-id="QkztWmT1XcJrz4ZZ7UiF"
-        title="Creative Funding form2"
+        id="inline-UmnsA8KFg6qOYeP87QDu" 
+  data-layout="{'id':'INLINE'}"
+  data-trigger-type="alwaysShow"
+  data-trigger-value=""
+  data-activation-type="alwaysActivated"
+  data-activation-value=""
+  data-deactivation-type="neverDeactivate"
+  data-deactivation-value=""
+  data-form-name="Creative funding Form2"
+  data-height="976"
+  data-layout-iframe-id="inline-UmnsA8KFg6qOYeP87QDu"
+  data-form-id="UmnsA8KFg6qOYeP87QDu"
+  title="Creative funding Form2"
       ></iframe>
     </div>
   );
