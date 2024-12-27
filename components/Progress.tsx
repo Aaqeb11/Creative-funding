@@ -294,6 +294,21 @@ const ProgressBar = () => {
             </div>
           ))}
         </div>
+        <div
+              id="intro_button"
+              className="w-[100%] p-4 flex md:justify-center justify-center"
+            >
+              <button
+                className="px-6 py-3 bg-gray-200 text-black rounded-lg shadow-md hover:bg-gray-300 transition"
+                onClick={() =>
+                  document
+                    .getElementById("form_sec")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                Request Funds Here
+              </button>
+            </div>
       </div>
     </>
   );

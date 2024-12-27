@@ -287,15 +287,9 @@ export default function Home() {
           className="text-3xl md:text-4xl font-semibold mt-6 mb-4 text-white text-center"
           id="process_heading"
         >
-          Our process makes funding easier
+          Our Process Makes Funding Easy
         </h2>
-        <p
-          className="text-md md:text-xl lg:max-w-2xl max-w-lg mt-2 text-center text-white px-2"
-          id="process_content"
-        >
-          Our trusted and tested process has been streamlined to perform better
-          and faster turning your dream into reality smoother than ever
-        </p>
+        
         <ProgressBar />
         <div></div>
       </section>

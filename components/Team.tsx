@@ -18,13 +18,15 @@ const Teams: React.FC = () => {
             />
             <h3 className="text-xl font-semibold mb-2">Pace Morby</h3>
             <p className="text-gray-600">
-              
-              Real Estate Investor | TV Show Host | Author
-
-              Teaching Financial Freedom Through Creative Finance 
+               TV Show Host | Author
+            </p>
+            <p className="text-gray-600">
+              <a href="https://pacemorby.com/about/" className="hover:underline">
+                Real Estate Investor
+              </a>
             </p>
           </div>
-
+          
           {/* Card 2 */}
           <div className="bg-transparent p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 duration-300">
             <Image
