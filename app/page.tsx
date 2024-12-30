@@ -194,7 +194,7 @@ export default function Home() {
                 className="text-5xl lg:text-8xl font-light p-4 mb-4 md:text-left text-center"
                 id="intro_main"
               >
-              Need A Loan Now ?
+                Need A Loan Now ?
               </h1>
             </div>
             <div className="w-[100%]">
@@ -222,7 +222,7 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="flex items-center w-full md:px-4 px-2 md:flex hidden">
+          <div className="items-center w-full md:px-4 px-2 md:flex hidden">
             <IntroCarousel />
           </div>
         </div>
@@ -243,7 +243,7 @@ export default function Home() {
         >
           Type Of Loans We Offer
         </h2>
-        
+
         <Loans />
       </section>
 
@@ -289,7 +289,7 @@ export default function Home() {
         >
           Our Process Makes Funding Easy
         </h2>
-        
+
         <ProgressBar />
         <div></div>
       </section>

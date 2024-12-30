@@ -71,10 +71,11 @@ const NavBar: React.FC = () => {
           {items.slice(0, 2).map((item, index) => (
             <div key={index} className="hidden lg:block w-full ">
               <button
-                className="text-lg font-medium nav-font hover:bg-custom-gradient transition-colors w-full rounded-full h-[60px] "
+                className="text-lg font-medium nav-font relative group w-full rounded-full h-[60px] overflow-hidden"
                 onClick={() => scrollToSection(item.id)}
               >
-                {item.item}
+                <div className="absolute inset-0 bg-custom-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <span className="relative z-10">{item.item}</span>
               </button>
             </div>
           ))}

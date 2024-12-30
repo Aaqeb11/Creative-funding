@@ -1,13 +1,19 @@
 import React from "react";
 import Image from "next/image";
-import { FaInstagram, FaFacebook, FaYoutube, FaLinkedin, FaTiktok } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaFacebook,
+  FaYoutube,
+  FaLinkedin,
+  FaTiktok,
+} from "react-icons/fa";
 import logoImage from "../public/dollar1.png"; // Adjust path as needed
 
 export const Footer = () => {
   return (
     <footer className="bg-transparent text-white py-8">
       <div className="h-1 mb-10 bg-gray-400 shadow-blurred-white"></div>
-      <div className="container mx-auto px-4">
+      <div className="flex  flex-col justify-between px-6 gap-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Left Section - Contact Information */}
           <div className="flex flex-col items-center md:items-start gap-1 text-gray-400 mb-6 md:mb-0">
@@ -17,7 +23,7 @@ export const Footer = () => {
           {/* Center Section - Logo */}
           <div className="mb-6 md:mb-0">
             <Image
-              src={logoImage}
+              src="/pace.png"
               alt="Logo"
               width={120} // Adjust size as needed
               height={40}
@@ -69,10 +75,10 @@ export const Footer = () => {
             </a>
           </div>
         </div>
-
         {/* Footer Text */}
-        <div className="text-center text-gray-400 text-sm mt-6 lg:ml-20">
-          ALL RIGHTS RESERVED
+        <div className="w-full bg-green-500 h-[1px]"></div>
+        <div className="text-center text-gray-400 text-xs">
+          © 2024 Creative Funding™. All Rights Reserved.
         </div>
       </div>
     </footer>
