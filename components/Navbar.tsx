@@ -94,7 +94,7 @@ const NavBar: React.FC = () => {
           <Link href="/" passHref>
             <div className="inline-block">
               {/* Logo placeholder */}
-              <Image src="/dollar2.png" alt="logo" width={100} height={100} />
+              <Image src="/logo.png" alt="logo" width={300} height={300} />
             </div>
           </Link>
         </div>

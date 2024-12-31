@@ -23,10 +23,10 @@ export const Footer = () => {
           {/* Center Section - Logo */}
           <div className="mb-6 md:mb-0">
             <Image
-              src="/pace.png"
+              src="/logo.png"
               alt="Logo"
-              width={120} // Adjust size as needed
-              height={40}
+              width={220} // Adjust size as needed
+              height={80}
               priority
             />
           </div>
@@ -75,8 +75,7 @@ export const Footer = () => {
             </a>
           </div>
         </div>
-        {/* Footer Text */}
-        <div className="w-full bg-green-500 h-[1px]"></div>
+
         <div className="text-center text-gray-400 text-xs">
           © 2024 Creative Funding™. All Rights Reserved.
         </div>
