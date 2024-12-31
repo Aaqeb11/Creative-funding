@@ -51,7 +51,7 @@ const Teams: React.FC = () => {
               quality={100}
               className=" w-[230px] h-[230px] lg:w-[70%] lg:h-[70%] mx-auto object-cover rounded-full mb-4"
             />
-            <h3 className="text-xl font-semibold mb-2">Heather Kiddo</h3>
+            <h3 className="text-xl font-semibold mb-2">Heather Kiddoo</h3>
             
           </div>
           {/* Card 4 */}
