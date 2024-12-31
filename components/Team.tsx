@@ -20,7 +20,7 @@ const Teams: React.FC = () => {
             <p className="text-gray-600">
                TV Show Host | Author
             </p>
-            <p className="text-gray-600">
+            <p className="text-[#0000FF]">
               <a href="https://pacemorby.com/about/" className="hover:underline">
                 Real Estate Investor
               </a>
