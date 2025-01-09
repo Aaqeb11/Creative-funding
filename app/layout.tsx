@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://creative-funding.vercel.app"),
+  metadataBase: new URL("https://needaloannow.com"),
   title: "Creative Funding - Flexible Loan Solutions",
   description:
     "Creative Funding provides trusted loan solutions with an easy application process, reliable service, and 24/7 availability. We offer various types of loans tailored to meet your financial needs.",
